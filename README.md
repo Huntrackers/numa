@@ -8,6 +8,14 @@ Start with the [English reviewer packet](docs/submission/README.md),
 
 Company payroll and employee savings on NEAR testnet, with a public product landing, self-serve company setup, a separate personal-finance simulation book and signed, read-only NEAR Intents route previews. English product interface; [Persian 3.1 handoff](docs/v3/HANDOFF_V31.fa.md).
 
+## Product film
+
+[![numa product film: Payday. In motion.](numa-product-film-v2.jpg)](numa-product-film-v2.mp4)
+
+[Watch / download the English MP4](https://github.com/Huntrackers/numa/raw/refs/heads/main/numa-product-film-v2.mp4) — 90 seconds, 1080p, with actual application captures, Gemini-generated motion and original music.
+
+The film labels fictional demoUSD separately from native NEAR testnet settlement and historical receipts. NEAR Intents quotes use `dry: true` and move no funds. DCA fills, investing, lending and Flexible Payday economics shown are simulations, not live financial execution or guaranteed returns. The [recorded reviewer walkthrough](docs/submission/media/numa-demo.webm) remains available as additional evidence.
+
 **Problem:** a company needs repeatable payroll without giving an automated executor unrestricted treasury access. An employee wants to assign part of every payday to a savings goal, then inspect what happened.
 
 **Working implementation:** a Rust NEAR vault reserves a bounded payroll window, checks due dates and credits each obligation once. Savings are allocated in the same contract call. A restricted function-call key can invoke only `execute_due` on that vault. Humans authorize mandates and employee withdrawals. The API and worker additionally check the reviewed contract code hash before dispatch.
