@@ -1,0 +1,64 @@
+name: Import verified numa source
+on:
+  push:
+    paths:
+      - numa-source.zip
+      - .github/workflows/import-source.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify uploaded archive checksum
+        run: echo '7176cd577451a4e34785be6630a37c28f622e5ee778760b39a6450181de1b66f  numa-source.zip' | sha256sum --check
+      - name: Validate and extract source snapshot
+        run: |
+          python3 - <<'PY'
+          import hashlib, json, pathlib, stat, zipfile
+          with zipfile.ZipFile('numa-source.zip') as z:
+              names = z.namelist()
+              assert len(names) == len(set(names)), 'Duplicate archive entries'
+              manifest = json.loads(z.read('SOURCE_MANIFEST.json'))
+              entries = manifest['entries']
+              expected = {e['path'] for e in entries} | {'SOURCE_MANIFEST.json'}
+              files = {n for n in names if not n.endswith('/')}
+              assert files == expected, 'Manifest does not match archive'
+              for n in files:
+                  p = pathlib.PurePosixPath(n)
+                  assert not p.is_absolute() and '..' not in p.parts and '\\' not in n
+                  assert not any(part in {'.git', 'data', 'node_modules', 'target', 'tools'} for part in p.parts)
+                  assert all(not part.startswith('.env') or part == '.env.example' for part in p.parts)
+                  assert not stat.S_ISLNK(z.getinfo(n).external_attr >> 16)
+              for e in entries:
+                  b = z.read(e['path'])
+                  assert len(b) == e['bytes'] and hashlib.sha256(b).hexdigest() == e['sha256']
+              for n in files:
+                  p = pathlib.Path(n)
+                  p.parent.mkdir(parents=True, exist_ok=True)
+                  p.write_bytes(z.read(n))
+          print('Validated and extracted', len(entries), 'source files')
+          PY
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '24'
+          cache: npm
+      - run: npm ci
+      - run: npx playwright install --with-deps chromium
+      - run: npm run verify -- --browser
+      - name: Verify native contract tests
+        run: |
+          rustup toolchain install stable --profile minimal
+          cargo +stable test --manifest-path contracts/payroll-vault/Cargo.toml --lib --locked
+      - name: Publish source with transparent import provenance
+        run: |
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git add --all
+          if ! git diff --cached --quiet; then
+            git commit -m 'Publish verified numa 3.1 source snapshot and reviewer documentation'
+            git push
+          fi
