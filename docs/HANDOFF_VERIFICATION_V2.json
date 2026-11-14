@@ -1,0 +1,11 @@
+{
+  "checkedAt": "2026-11-06T14:24:26.310Z",
+  "format": "PASSED",
+  "typecheck": "PASSED",
+  "persianLintIssues": 0,
+  "checkedLinks": 21,
+  "missingLinks": [],
+  "brokenUrls": [],
+  "specSha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618",
+  "specUnchanged": true
+}

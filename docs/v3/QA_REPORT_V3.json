@@ -1,0 +1,422 @@
+{
+  "product": "numa",
+  "version": "3.0.0",
+  "checkedAt": "2026-11-06T15:42:29.427Z",
+  "status": "PASS_WITH_DISCLOSED_LIMITS",
+  "verification": {
+    "product": "numa",
+    "version": "3.0.0",
+    "startedAt": "2026-11-06T15:35:49.609Z",
+    "completedAt": "2026-11-06T15:38:16.170Z",
+    "status": "PASS",
+    "durationMs": 146560,
+    "platform": "win32",
+    "architecture": "x64",
+    "node": "v24.16.0",
+    "sourceDigest": "c043536caa64400e2453c062fb53c327a6175035bb20b04004ed7a2ef3b391fe",
+    "sourceUnchangedDuringVerification": true,
+    "requestedProfile": {
+      "browser": true,
+      "contract": false
+    },
+    "steps": [
+      {
+        "name": "environment",
+        "command": "npm run doctor -- --browser",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 661,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/environment.txt"
+      },
+      {
+        "name": "format",
+        "command": "npm run format:check",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 1858,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/format.txt"
+      },
+      {
+        "name": "unit-api",
+        "command": "npm run test -- --reporter=json --outputFile=C:\\Users\\User\\Documents\\Codex\\2026-11-02\\11-2-2026-4-21-pm\\numa-v3\\independent-review\\reproduction\\candidate-20261106\\review-source\\artifacts\\verify\\2026-11-06T15-35-49-609Z\\unit.json",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 26498,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/unit-api.txt"
+      },
+      {
+        "name": "build",
+        "command": "npm run build",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 4821,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/build.txt"
+      },
+      {
+        "name": "http-journey",
+        "command": "npm run review:smoke",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 4678,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/http-journey.txt"
+      },
+      {
+        "name": "browser",
+        "command": "npm run test:e2e -- --reporter=list,json",
+        "status": "PASS",
+        "exitCode": 0,
+        "durationMs": 107973,
+        "log": "artifacts/verify/2026-11-06T15-35-49-609Z/browser.txt"
+      },
+      {
+        "name": "contract",
+        "command": "npm run test:contract",
+        "status": "NOT_REQUESTED"
+      }
+    ],
+    "scoring": {
+      "officialScore": null,
+      "internalProjectScore": null,
+      "note": "Passing checks is evidence, not a contest score."
+    },
+    "boundaries": [
+      "No mainnet transfers or human wallet signatures are performed.",
+      "The HTTP journey is an isolated fixture journey.",
+      "Live provider availability is checked separately using npm run intents:smoke."
+    ]
+  },
+  "counts": {
+    "unitApi": {
+      "passed": 227,
+      "total": 227,
+      "failed": 0
+    },
+    "browser": {
+      "passed": 47,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0
+    },
+    "contract": {
+      "passed": 29,
+      "failed": 0,
+      "ignored": 1,
+      "ignoredReason": "Private V2 snapshot rehearsal is optional and was run separately successfully before migration."
+    },
+    "liveTestnet": {
+      "passed": 13,
+      "mode": "ACTUAL_TESTNET_TRANSACTIONS"
+    },
+    "httpFixture": {
+      "passed": 10,
+      "newOnchainTransactions": 0
+    }
+  },
+  "benchmark": {
+    "mode": "ISOLATED_LOCAL_HTTP",
+    "iterations": 3,
+    "startupMs": [
+      1073,
+      1281,
+      1272
+    ],
+    "totalMs": [
+      4063,
+      4233,
+      4229
+    ],
+    "environment": {
+      "node": "v24.16.0",
+      "platform": "win32"
+    },
+    "note": "Warm dependency installation, fresh temporary DB and child process per iteration; not a load test."
+  },
+  "dependencies": {
+    "info": 0,
+    "low": 8,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0,
+    "total": 8
+  },
+  "scoring": {
+    "officialScore": null,
+    "publishedWeights": null,
+    "activeUserPenaltyApplied": false,
+    "desiredScoreIsNotEvidence": true,
+    "preliminaryScore": 95,
+    "classification": "NON_OFFICIAL_INDEPENDENT_ASSURANCE_REVIEW",
+    "scoreMethodReport": "INDEPENDENT_REVIEW_V3.md",
+    "target99Confirmed": false
+  },
+  "sourceSpecSha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618",
+  "boundaries": [
+    "Native contract tests do not measure every Wasm instruction.",
+    "Actual V3 migration and small testnet payroll/withdrawal were confirmed separately.",
+    "Browser signature/transaction boundaries use labelled fixtures.",
+    "Eight low dependency advisories remain; no moderate/high/critical advisories in this audit.",
+    "Full external audit, mainnet deployment and publication are not claimed."
+  ],
+  "verificationProfiles": {
+    "finalIndependent": {
+      "product": "numa",
+      "version": "3.0.0",
+      "startedAt": "2026-11-06T15:35:49.609Z",
+      "completedAt": "2026-11-06T15:38:16.170Z",
+      "status": "PASS",
+      "durationMs": 146560,
+      "platform": "win32",
+      "architecture": "x64",
+      "node": "v24.16.0",
+      "sourceDigest": "c043536caa64400e2453c062fb53c327a6175035bb20b04004ed7a2ef3b391fe",
+      "sourceUnchangedDuringVerification": true,
+      "requestedProfile": {
+        "browser": true,
+        "contract": false
+      },
+      "steps": [
+        {
+          "name": "environment",
+          "command": "npm run doctor -- --browser",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 661,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/environment.txt"
+        },
+        {
+          "name": "format",
+          "command": "npm run format:check",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 1858,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/format.txt"
+        },
+        {
+          "name": "unit-api",
+          "command": "npm run test -- --reporter=json --outputFile=C:\\Users\\User\\Documents\\Codex\\2026-11-02\\11-2-2026-4-21-pm\\numa-v3\\independent-review\\reproduction\\candidate-20261106\\review-source\\artifacts\\verify\\2026-11-06T15-35-49-609Z\\unit.json",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 26498,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/unit-api.txt"
+        },
+        {
+          "name": "build",
+          "command": "npm run build",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4821,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/build.txt"
+        },
+        {
+          "name": "http-journey",
+          "command": "npm run review:smoke",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4678,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/http-journey.txt"
+        },
+        {
+          "name": "browser",
+          "command": "npm run test:e2e -- --reporter=list,json",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 107973,
+          "log": "artifacts/verify/2026-11-06T15-35-49-609Z/browser.txt"
+        },
+        {
+          "name": "contract",
+          "command": "npm run test:contract",
+          "status": "NOT_REQUESTED"
+        }
+      ],
+      "scoring": {
+        "officialScore": null,
+        "internalProjectScore": null,
+        "note": "Passing checks is evidence, not a contest score."
+      },
+      "boundaries": [
+        "No mainnet transfers or human wallet signatures are performed.",
+        "The HTTP journey is an isolated fixture journey.",
+        "Live provider availability is checked separately using npm run intents:smoke."
+      ]
+    },
+    "canonicalFullBeforePackagingOnlyFixes": {
+      "product": "numa",
+      "version": "3.0.0",
+      "startedAt": "2026-11-06T15:24:06.835Z",
+      "completedAt": "2026-11-06T15:27:08.887Z",
+      "status": "PASS",
+      "durationMs": 182052,
+      "platform": "win32",
+      "architecture": "x64",
+      "node": "v24.16.0",
+      "sourceDigest": "93dcf7b11826e45d2919eb3f82e7187f6a359ea61d9279422403a1142e69d7f2",
+      "sourceUnchangedDuringVerification": true,
+      "requestedProfile": {
+        "browser": true,
+        "contract": true
+      },
+      "steps": [
+        {
+          "name": "environment",
+          "command": "npm run doctor -- --browser",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 674,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/environment.txt"
+        },
+        {
+          "name": "format",
+          "command": "npm run format:check",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 1785,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/format.txt"
+        },
+        {
+          "name": "unit-api",
+          "command": "npm run test -- --reporter=json --outputFile=D:\\NEAR Hackathon\\Project\\artifacts\\verify\\2026-11-06T15-24-06-835Z\\unit.json",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 25633,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/unit-api.txt"
+        },
+        {
+          "name": "build",
+          "command": "npm run build",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4418,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/build.txt"
+        },
+        {
+          "name": "http-journey",
+          "command": "npm run review:smoke",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4320,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/http-journey.txt"
+        },
+        {
+          "name": "browser",
+          "command": "npm run test:e2e -- --reporter=list,json",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 100698,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/browser.txt"
+        },
+        {
+          "name": "contract",
+          "command": "npm run test:contract",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 44451,
+          "log": "artifacts/verify/2026-11-06T15-24-06-835Z/contract.txt"
+        }
+      ],
+      "scoring": {
+        "officialScore": null,
+        "internalProjectScore": null,
+        "note": "Passing checks is evidence, not a contest score."
+      },
+      "boundaries": [
+        "No mainnet transfers or human wallet signatures are performed.",
+        "The HTTP journey is an isolated fixture journey.",
+        "Live provider availability is checked separately using npm run intents:smoke."
+      ]
+    },
+    "canonicalCoreAndContractAfterAtomicSetup": {
+      "product": "numa",
+      "version": "3.0.0",
+      "startedAt": "2026-11-06T15:31:38.385Z",
+      "completedAt": "2026-11-06T15:33:05.198Z",
+      "status": "PASS",
+      "durationMs": 86812,
+      "platform": "win32",
+      "architecture": "x64",
+      "node": "v24.16.0",
+      "sourceDigest": "d5a0cdd5005a8810bb26c3bf6940ca7a05d1d4dd49542de3bab2adb31649ea3a",
+      "sourceUnchangedDuringVerification": true,
+      "requestedProfile": {
+        "browser": false,
+        "contract": true
+      },
+      "steps": [
+        {
+          "name": "environment",
+          "command": "npm run doctor",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 638,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/environment.txt"
+        },
+        {
+          "name": "format",
+          "command": "npm run format:check",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 1750,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/format.txt"
+        },
+        {
+          "name": "unit-api",
+          "command": "npm run test -- --reporter=json --outputFile=D:\\NEAR Hackathon\\Project\\artifacts\\verify\\2026-11-06T15-31-38-385Z\\unit.json",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 26794,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/unit-api.txt"
+        },
+        {
+          "name": "build",
+          "command": "npm run build",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4717,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/build.txt"
+        },
+        {
+          "name": "http-journey",
+          "command": "npm run review:smoke",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 4447,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/http-journey.txt"
+        },
+        {
+          "name": "browser",
+          "command": "npm run test:e2e",
+          "status": "NOT_REQUESTED"
+        },
+        {
+          "name": "contract",
+          "command": "npm run test:contract",
+          "status": "PASS",
+          "exitCode": 0,
+          "durationMs": 48398,
+          "log": "artifacts/verify/2026-11-06T15-31-38-385Z/contract.txt"
+        }
+      ],
+      "scoring": {
+        "officialScore": null,
+        "internalProjectScore": null,
+        "note": "Passing checks is evidence, not a contest score."
+      },
+      "boundaries": [
+        "No mainnet transfers or human wallet signatures are performed.",
+        "The HTTP journey is an isolated fixture journey.",
+        "Live provider availability is checked separately using npm run intents:smoke."
+      ]
+    }
+  },
+  "finalSourceDigest": "c043536caa64400e2453c062fb53c327a6175035bb20b04004ed7a2ef3b391fe",
+  "sourceDigestMatchesFinalProject": true,
+  "packageReview": {
+    "original": "FORMAT_FAILURE_IN_GENERATED_MANIFEST",
+    "fix": "Exporter uses repository Prettier configuration",
+    "retested": "PASS",
+    "unitTests": 227,
+    "httpChecks": 10,
+    "browserTests": 47,
+    "sourceUnchanged": true
+  }
+}

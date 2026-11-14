@@ -1,0 +1,66 @@
+{
+  "product": "numa",
+  "version": "3.0.0",
+  "checkedAt": "2026-11-06T15:36:28.119Z",
+  "status": "PASS",
+  "startupMs": 1056,
+  "totalMs": 4056,
+  "platform": "win32",
+  "node": "v24.16.0",
+  "mode": "ISOLATED_HTTP_FIXTURE_JOURNEY",
+  "mainnetTransactions": 0,
+  "newOnchainTransactions": 0,
+  "humanSignatures": 0,
+  "tests": [
+    {
+      "id": "startup",
+      "status": "PASS",
+      "detail": "Fresh temporary database, loopback HTTP and current product version."
+    },
+    {
+      "id": "isolation",
+      "status": "PASS",
+      "detail": "Automatic signing settings are removed by the review launcher."
+    },
+    {
+      "id": "preview",
+      "status": "PASS",
+      "detail": "Payroll preview leaves balances and obligations unchanged."
+    },
+    {
+      "id": "idempotency",
+      "status": "PASS",
+      "detail": "Replaying the same authorization returns the recorded result."
+    },
+    {
+      "id": "payday",
+      "status": "PASS",
+      "detail": "The real planning worker credits all five fixture salaries; every journal entry balances."
+    },
+    {
+      "id": "employee",
+      "status": "PASS",
+      "detail": "The employee sees only their payday and funded savings goal."
+    },
+    {
+      "id": "authority",
+      "status": "PASS",
+      "detail": "The platform operator can inspect companies and cannot spend their treasury."
+    },
+    {
+      "id": "policy",
+      "status": "PASS",
+      "detail": "Shared policy evaluator rejects eight synthetic unsigned cases."
+    },
+    {
+      "id": "signature",
+      "status": "PASS",
+      "detail": "Archived real dry quote signature verifies using the official SDK; not a fresh market quote."
+    },
+    {
+      "id": "claims",
+      "status": "PASS",
+      "detail": "Machine-readable verification map reports claims and boundaries without self-issued scores."
+    }
+  ]
+}

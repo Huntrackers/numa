@@ -1,0 +1,101 @@
+{
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "company": "smoke-mw4aez4w",
+  "checkedAt": "2026-11-06T01:23:30.577Z",
+  "checks": [
+    {
+      "check": "withdraw_company_surplus rejects unauthorized or unfunded request",
+      "passed": true
+    },
+    {
+      "check": "Salary fully reserved",
+      "passed": true
+    },
+    {
+      "check": "withdraw_company_surplus rejects unauthorized or unfunded request",
+      "passed": true
+    },
+    {
+      "check": "Employee claims paused salary and goals allocate atomically",
+      "passed": true
+    },
+    {
+      "check": "Duplicate claim never credits twice",
+      "passed": true
+    },
+    {
+      "check": "request_withdrawal rejects unauthorized or unfunded request",
+      "passed": true
+    },
+    {
+      "check": "Withdrawal callback finalized successfully",
+      "passed": true
+    },
+    {
+      "check": "Employee releases goal to own free cash",
+      "passed": true
+    },
+    {
+      "check": "Company reserved balance reaches zero after settlement",
+      "passed": true
+    }
+  ],
+  "transactions": [
+    {
+      "method": "register_company",
+      "signer": "noma-owner-mw4ab6ev.testnet",
+      "hash": "4iLYXsdZWMV5doVSBuREfqfTdriXtEXxMm8Qk59e4jUU"
+    },
+    {
+      "method": "register_employee",
+      "signer": "noma-owner-mw4ab6ev.testnet",
+      "hash": "4rH9TAUydeL3H73ckY5v3tCx47jVn8Nr4JD5ZLHEtGuE"
+    },
+    {
+      "method": "accept_employment",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "2cJ1fC8ht1mK8BAMfChtd4U5mymEaGZZvxMHF3akNay2"
+    },
+    {
+      "method": "fund_treasury",
+      "signer": "noma-owner-mw4ab6ev.testnet",
+      "hash": "g4vi3FVMFHs46WYHPXc3bhVL2vTf1PdHizMvYQaWYSQ"
+    },
+    {
+      "method": "set_goal_policy",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "CXdJj9bESdLzjwgv7BqFjHHDuMktEDBAiEhzyC862U9H"
+    },
+    {
+      "method": "authorize_mandate",
+      "signer": "noma-owner-mw4ab6ev.testnet",
+      "hash": "AcaA7JL8oEHk5cW1TptRd4DkzkbqCkruuqWyCMeeRgTg"
+    },
+    {
+      "method": "pause_mandate",
+      "signer": "noma-owner-mw4ab6ev.testnet",
+      "hash": "7sf8iA16kpV7U3VKrvLsuDF3UWSsjMPCctcZZ6Q2SN4f"
+    },
+    {
+      "method": "claim_due",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "5C4uYvhBgsWXnky6fH4cJV1Nt5oFXvoxTa726mM9wzDr"
+    },
+    {
+      "method": "claim_due",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "EhC6gtrBB4uvX9aAicJPy5XcURSrcXVSgxhxr4k4zZdb"
+    },
+    {
+      "method": "request_withdrawal",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "BE2pJvUn9fKmFrzCkw9vHyes6Uii4qW57mV1vswrhFan"
+    },
+    {
+      "method": "release_goal",
+      "signer": "noma-employee-mw4ab6ev.testnet",
+      "hash": "BVJTimdY7gBvpu9Js9FesjHTpLWQAgR2CxVvkGEzNwDD"
+    }
+  ]
+}

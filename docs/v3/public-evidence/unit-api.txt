@@ -1,0 +1,13 @@
+
+> numa@3.0.0 test
+> vitest run --reporter=json --outputFile=C:\Users\User\Documents\Codex\2026-11-02\11-2-2026-4-21-pm\numa-v3\independent-review\reproduction\candidate-20261106\review-source\artifacts\verify\2026-11-06T15-35-49-609Z\unit.json
+
+{"level":30,"time":1793979374382,"pid":11392,"hostname":"MohsenTUF","reqId":"req-1","req":{"method":"POST","url":"/api/v1/auth/demo","host":"localhost:80","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+{"level":30,"time":1793979374388,"pid":11392,"hostname":"MohsenTUF","reqId":"req-1","res":{"statusCode":403},"responseTime":5.125099999999975,"msg":"request completed"}
+{"level":30,"time":1793979374389,"pid":11392,"hostname":"MohsenTUF","reqId":"req-2","req":{"method":"POST","url":"/api/v1/auth/demo","host":"localhost","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+{"level":30,"time":1793979374392,"pid":11392,"hostname":"MohsenTUF","reqId":"req-2","res":{"statusCode":200},"responseTime":3.0792999999999893,"msg":"request completed"}
+{"level":30,"time":1793979374392,"pid":11392,"hostname":"MohsenTUF","reqId":"req-3","req":{"method":"POST","url":"/api/v1/commands","host":"localhost","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+{"level":30,"time":1793979374393,"pid":11392,"hostname":"MohsenTUF","reqId":"req-3","res":{"statusCode":403},"responseTime":0.8363999999999123,"msg":"request completed"}
+{"level":30,"time":1793979374393,"pid":11392,"hostname":"MohsenTUF","reqId":"req-4","req":{"method":"POST","url":"/api/v1/commands","host":"localhost","remoteAddress":"127.0.0.1"},"msg":"incoming request"}
+{"level":30,"time":1793979374397,"pid":11392,"hostname":"MohsenTUF","reqId":"req-4","res":{"statusCode":200},"responseTime":3.941599999999994,"msg":"request completed"}
+JSON report written to C:/Users/User/Documents/Codex/2026-11-02/11-2-2026-4-21-pm/numa-v3/independent-review/reproduction/candidate-20261106/review-source/artifacts/verify/2026-11-06T15-35-49-609Z/unit.json

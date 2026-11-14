@@ -1,0 +1,125 @@
+{
+  "product": "numa",
+  "version": "2.0.0",
+  "checkedAt": "2026-11-06T14:23:00.447Z",
+  "releaseClass": "LOCAL_TESTNET",
+  "status": "PASSED_WITH_DOCUMENTED_LIMITS",
+  "checks": {
+    "unitAndApi": {
+      "passed": 195,
+      "failed": 0,
+      "evidence": "UNIT_TEST_REPORT_V2.json"
+    },
+    "nativeRust": {
+      "passed": 18,
+      "failed": 0,
+      "evidence": "CONTRACT_TEST_REPORT_V2.txt",
+      "notAFullChainSandbox": true
+    },
+    "browser": {
+      "finalRound": {
+        "passed": 31,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0,
+        "evidence": "BROWSER_ROUND_2_V2.json"
+      },
+      "previousRound": {
+        "passed": 30,
+        "skipped": 0,
+        "unexpected": 0,
+        "flaky": 0,
+        "evidence": "BROWSER_ROUND_1_V2.json"
+      },
+      "fixturesAtSelectedIdentityAndTransactionBoundaries": true
+    },
+    "build": {
+      "status": "PASSED",
+      "command": "npm run build",
+      "typecheck": true,
+      "evidence": "BUILD_REPORT_V2.txt"
+    },
+    "format": {
+      "status": "PASSED",
+      "command": "npm run format:check"
+    },
+    "cleanInstall": {
+      "status": "PASSED",
+      "evidence": "CLEAN_INSTALL_SMOKE_V2.json"
+    },
+    "reviewIsolation": {
+      "status": "PASSED",
+      "evidence": "JUDGE_ISOLATION_SMOKE_V2.json"
+    },
+    "mainRuntime": {
+      "version": "2.0.0",
+      "worker": "RUNNING",
+      "accounting": "VERIFIED",
+      "reconciliation": "HEALTHY",
+      "samplePersonasEnabled": false,
+      "evidence": "RUNTIME_SMOKE_V2.json"
+    },
+    "backupRestore": {
+      "status": "PASSED",
+      "evidence": "BACKUP_RESTORE_SMOKE_V2.txt"
+    },
+    "liveIntentsReadOnly": {
+      "status": "PASSED",
+      "sdkSignatureVerified": true,
+      "dryForced": true,
+      "fundsMoved": 0,
+      "evidence": "INTENTS_READONLY_SMOKE.json"
+    },
+    "media": {
+      "status": "PASSED",
+      "video": "qa/numa-v2-walkthrough.webm",
+      "metadataAndSeekVerified": true,
+      "mobileNoOverflow": true,
+      "evidence": [
+        "REVIEW_WALKTHROUGH_V2.json",
+        "VIDEO_VALIDATION_V2.json",
+        "VISUAL_RUNTIME_SMOKE_V2.json"
+      ]
+    },
+    "productionDependencyAudit": {
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "evidence": "DEPENDENCY_AUDIT_V2.json"
+    },
+    "specIntegrity": {
+      "status": "UNCHANGED",
+      "path": "final-fa-v1/FINAL_SPEC.fa.md",
+      "sha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618"
+    }
+  },
+  "acceptance": {
+    "baseline": "T01-T42; see ACCEPTANCE_MATRIX.fa.md for evidence and per-scenario limits",
+    "additions": "V201-V212; see hackathon-2026/ACCEPTANCE_V2.fa.md"
+  },
+  "evaluation": {
+    "internalScore": 76,
+    "max": 100,
+    "official": false,
+    "independent": false,
+    "method": "Five equal-weight axes; official numeric weights were not published",
+    "evidence": "hackathon-2026/JUDGING.fa.md"
+  },
+  "notClaimed": [
+    "Highest official score or guaranteed award",
+    "Public production/mainnet deployment",
+    "New human Meteor signature during this review",
+    "Independent audit or comprehensive penetration/load testing",
+    "Real DCA/investment/stock/Earn/loan/Flexible Payday execution",
+    "Wet Intents quote, deposit, signing, transfer or mainnet settlement",
+    "Public repository, X post, consent or hackathon submission"
+  ],
+  "publicationGate": "PENDING_OWNER_PUBLICATION_AND_REAL_REGISTRATION_DETAILS",
+  "costs": {
+    "paidApiPurchase": false,
+    "mainnetSpend": false,
+    "localHardwareAndInternetRequired": true
+  }
+}

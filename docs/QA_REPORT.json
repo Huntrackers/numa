@@ -1,0 +1,176 @@
+{
+  "product": "numa",
+  "version": "1.0.0",
+  "generatedAt": "2026-11-06T12:43:29.188Z",
+  "readiness": "Local NEAR testnet v1.0 within the approved scope; not a mainnet launch or independent security audit",
+  "scopeReference": "final-fa-v1/FINAL_SPEC.fa.md",
+  "acceptanceMatrix": "ACCEPTANCE_MATRIX.fa.md",
+  "tests": {
+    "core": {
+      "passed": 145,
+      "failed": 0,
+      "total": 145,
+      "report": "UNIT_TEST_REPORT.json"
+    },
+    "rustContract": {
+      "passed": 18,
+      "failed": 0,
+      "sharedGoldenVectors": 8,
+      "command": "powershell -File scripts/test-contract.ps1",
+      "report": "CONTRACT_TEST_REPORT.txt",
+      "scope": "Native NEAR SDK unit tests, not a full sandbox suite"
+    },
+    "browser": {
+      "passed": 24,
+      "failed": 0,
+      "flaky": 0,
+      "skipped": 0,
+      "report": "BROWSER_TEST_REPORT.json",
+      "fullRuns": [
+        {
+          "passed": 23,
+          "failed": 0,
+          "evidence": "Recorded command output and qa/v1-round-1 artifacts; no standalone JSON retained"
+        },
+        {
+          "passed": 24,
+          "failed": 0,
+          "report": "BROWSER_ROUND_2.json"
+        },
+        {
+          "passed": 24,
+          "failed": 0,
+          "report": "BROWSER_ROUND_3.json"
+        },
+        {
+          "passed": 24,
+          "failed": 0,
+          "report": "BROWSER_TEST_REPORT.json"
+        }
+      ],
+      "afterFinalLoginPolish": {
+        "passed": 8,
+        "failed": 0,
+        "flaky": 0,
+        "skipped": 0,
+        "report": "BROWSER_LOGIN_FINAL.json"
+      },
+      "boundary": "Browser data, signature and transaction boundaries use fixtures in selected journeys. The pinned Meteor executor and opening the official web wallet are also tested. Human account selection/signing is not claimed."
+    },
+    "build": {
+      "passed": true,
+      "command": "npm run build",
+      "report": "BUILD_REPORT.txt",
+      "remainingWarnings": []
+    },
+    "format": {
+      "passed": true,
+      "command": "npm run format:check"
+    },
+    "databaseBackup": {
+      "passed": true,
+      "restoredAndIntegrityChecked": true,
+      "report": "BACKUP_RESTORE_SMOKE.txt"
+    },
+    "testnet": {
+      "network": "testnet",
+      "contractId": "noma-vault-mw4ab6ev.testnet",
+      "accountingUpgrade": "CONTRACT_UPGRADE_ACCOUNTING_V2.json",
+      "latestFinancialSmoke": {
+        "passed": true,
+        "receipts": 8,
+        "journalEntries": 12,
+        "openingSequence": 53,
+        "finalSequence": 61,
+        "accounting": "VERIFIED",
+        "report": "ACCOUNTING_TESTNET_SMOKE.json"
+      },
+      "priorSelectedEvidence": [
+        "TESTNET_SMOKE.json",
+        "TESTNET_WORKER_SMOKE.json",
+        "LIVE_PRODUCT_SMOKE.json",
+        "SAVINGS_TESTNET_SMOKE.json"
+      ],
+      "boundary": "Selected real testnet transactions and contract callbacks are covered. Every possible live RPC outage, callback loss or power-cut timing has not been injected."
+    },
+    "runtime": {
+      "passed": true,
+      "version": "1.0.0",
+      "worker": "RUNNING",
+      "reconciliation": "HEALTHY",
+      "accounting": "VERIFIED",
+      "eventCursor": 61,
+      "restrictedExecutorMethods": [
+        "execute_due"
+      ],
+      "report": "RUNTIME_SMOKE.json"
+    },
+    "visual": {
+      "passed": true,
+      "desktop": true,
+      "mobile": true,
+      "horizontalOverflow": false,
+      "pinnedMeteorInitialized": true,
+      "unsafeEval": false,
+      "samplePersonasDisabled": true,
+      "report": "VISUAL_RUNTIME_SMOKE.json"
+    },
+    "localModel": {
+      "local": true,
+      "optional": true,
+      "noFinancialAuthority": true,
+      "report": "LOCAL_MODEL_SMOKE.json",
+      "boundary": "Provider enable/disable and typed proposals tested separately; this historical model smoke is not a new independent audit."
+    }
+  },
+  "visualReview": {
+    "desktopReviewed": true,
+    "mobileReviewed": true,
+    "viewports": [
+      {
+        "width": 1440,
+        "height": 1000
+      },
+      {
+        "width": 390,
+        "height": 844
+      }
+    ],
+    "screenshots": [
+      "qa/numa-v1-login-desktop.png",
+      "qa/numa-v1-login-mobile.png",
+      "qa/numa-v1-meteor-desktop.png",
+      "qa/numa-near-payroll.png",
+      "qa/numa-v1-personal-mobile.png"
+    ]
+  },
+  "dependencyAudit": {
+    "scope": "Production npm dependencies",
+    "vulnerabilities": {
+      "info": 0,
+      "low": 8,
+      "moderate": 0,
+      "high": 0,
+      "critical": 0,
+      "total": 8
+    },
+    "report": "DEPENDENCY_AUDIT.json",
+    "residualRisk": "Eight low-severity findings remain in the transitive NEAR SDK elliptic/secp256k1 chain. This release uses ed25519 for login verification and the executor. No forced downgrade or unreviewed major dependency replacement was applied."
+  },
+  "cost": {
+    "paidServicesPurchased": 0,
+    "paidApiKeysRequired": 0,
+    "mainnetFundsUsed": 0,
+    "localDiskInternetAndElectricityStillRequired": true
+  },
+  "limitations": [
+    "Intents conversions, DCA fills, stocks/ETFs, Earn, flexible payday and loans are explicitly simulated as approved. They do not move mainnet funds or promise market yield.",
+    "Actual salary settlement and savings use native testNEAR on NEAR testnet; no fabricated testNEAR/demoUSD exchange rate exists.",
+    "The current contract has finite storage limits: 30 companies, 50 employees per company, 20 obligations per authorization batch, 2000 obligations/withdrawals, 10 goals per account and 12000 events. Growth needs a reviewed migration.",
+    "Legacy chain accounting begins with a labelled opening snapshot; unavailable historic detail is not fabricated.",
+    "One future salary amendment is supported until it becomes effective. Partially signed decisions must be resolved before overlapping changes.",
+    "The local device, API, worker and internet must remain available for scheduled execution. A local v1 release is not public hosting.",
+    "Manual human Meteor selection/signing, long-duration load testing, all live network failure modes, mainnet readiness and independent security audit are not claimed.",
+    "The operational ledger is not a country-specific statutory accounting or tax product."
+  ]
+}

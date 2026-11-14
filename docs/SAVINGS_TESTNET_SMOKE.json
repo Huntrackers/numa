@@ -1,0 +1,40 @@
+{
+  "checkedAt": "2026-11-06T08:15:08.337Z",
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "checks": [
+    "Authenticated v2 savings policy keeps existing reserves and stores explicit contribution basis",
+    "Real salary atomically reserves the fixed amount and credits exactly the remaining cash",
+    "Release returns only the reserve to cash and keeps future contributions paused",
+    "Closed savings require explicit consent before reactivation",
+    "Original policy restored while the acceptance goal remains archived in history"
+  ],
+  "receipts": [
+    {
+      "method": "set_goal_policy_v2",
+      "txHash": "13bimBD28YAKUNmm3FtZhKZjnUNihtEywwfpUoNV4Dh1"
+    },
+    {
+      "method": "authorize_mandate",
+      "txHash": "6YbWWesMfnMsYf3rs1urwzaoMaEcN4kNghYvdwHynsHU"
+    },
+    {
+      "method": "claim_due",
+      "txHash": "BnBevHSLSbpLpYTUVEKL71pocHWWVMMB6Jswe8apUpJw"
+    },
+    {
+      "method": "release_goal",
+      "txHash": "8GTbNA3Hm55xY1nPbUu7JGPnVMLqWNbvhdj6rEnAWvYh"
+    },
+    {
+      "method": "set_goal_policy_v2",
+      "txHash": "5JFRiZdt16xzYf354ANAtdHs7V3XxdFFo6kkkJ5Cnb3E"
+    },
+    {
+      "method": "set_goal_policy_v2",
+      "txHash": "9tt3v3b9twgrGyZhJ2neezi87bBNiFwTkZ9ChQskV81i"
+    }
+  ],
+  "obligationId": "savings_v2_9dde0770bd824e0c86690acf19cace40",
+  "goalId": "g_20ef9c7a9cbdaa0a9e901c94"
+}

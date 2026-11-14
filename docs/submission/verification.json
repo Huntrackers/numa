@@ -1,0 +1,102 @@
+{
+  "generatedAt": "2026-11-14T14:56:02.148Z",
+  "classification": "LOCAL_VERIFICATION_NOT_OFFICIAL_JUDGING",
+  "version": "3.1.0",
+  "startedAt": "2026-11-14T14:51:14.202Z",
+  "completedAt": "2026-11-14T14:55:20.022Z",
+  "status": "PASS",
+  "sourceDigest": "5f15b7a2bb189662efcd78cb8092a0e7261e44c4dc3dd1f3660941bd262c8021",
+  "sourceUnchangedDuringVerification": true,
+  "environment": {
+    "platform": "win32",
+    "node": "v24.16.0"
+  },
+  "counts": {
+    "unitPassed": 283,
+    "unitFailed": 0,
+    "browserPassed": 79,
+    "browserFailed": 0,
+    "browserFlaky": 0,
+    "browserSkipped": 0,
+    "contractPassed": 29,
+    "contractFailed": 0,
+    "contractIgnored": 1
+  },
+  "steps": [
+    {
+      "name": "environment",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 684,
+      "command": "npm run doctor -- --browser"
+    },
+    {
+      "name": "format",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 2244,
+      "command": "npm run format:check"
+    },
+    {
+      "name": "unit-api",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 29157,
+      "command": "npm run test -- --reporter=json --outputFile=.\\artifacts\\verify\\2026-11-14T14-51-14-202Z\\unit.json"
+    },
+    {
+      "name": "build",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 5426,
+      "command": "npm run build"
+    },
+    {
+      "name": "http-journey",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 4452,
+      "command": "npm run review:smoke"
+    },
+    {
+      "name": "browser",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 143543,
+      "command": "npm run test:e2e -- --reporter=list,json"
+    },
+    {
+      "name": "contract",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 60153,
+      "command": "npm run test:contract"
+    }
+  ],
+  "liveIntents": {
+    "checkedAt": "2026-11-14T14:50:40.486Z",
+    "dry": true,
+    "signatureVerified": true,
+    "fundsMoved": false,
+    "executionEnabled": false,
+    "origin": {
+      "assetId": "nep141:base-0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.omft.near",
+      "symbol": "USDC",
+      "blockchain": "base",
+      "decimals": 6
+    },
+    "destination": {
+      "assetId": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+      "symbol": "USDC",
+      "blockchain": "near",
+      "decimals": 6
+    }
+  },
+  "officialRules": {
+    "url": "https://nearhackathon.com/HACKATHON.md",
+    "checkedAt": "2026-11-14T14:56:02.149Z",
+    "sha256": "6dd0c1ff2f98a2fc4b6339cd1cfad110e44ef0da761ba085028faa7e59c4868d",
+    "deadline": "2026-11-14T23:59:00Z"
+  },
+  "disclosure": "One native test requires a private V2 snapshot and is intentionally ignored. No live wallet or mainnet transaction is signed by this verification. Historical live-testnet evidence is separate."
+}

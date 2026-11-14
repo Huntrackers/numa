@@ -1,0 +1,273 @@
+{
+  "retrievedOn": "2026-11-06",
+  "scope": "NEAR HACKATHON official rules and screening expectations; research only",
+  "sources": [
+    {
+      "url": "https://nearhackathon.com/",
+      "localSnapshot": "sources/homepage.current.html",
+      "relevantSection": "How will projects be judged?"
+    },
+    {
+      "url": "https://nearhackathon.com/HACKATHON.md",
+      "localSnapshot": "sources/HACKATHON.current.md",
+      "sha256": "86654c13521fe629493bf498d41c0f7573047867d67fcdd8c2543411fc13062f",
+      "relevantSections": [
+        "Q-001 to Q-017",
+        "Procedure",
+        "Tracks"
+      ]
+    },
+    {
+      "url": "https://github.com/nearai/near-hackathon-prompt-examples/blob/main/tracks/08-realworld.md",
+      "localSnapshot": "sources/08-realworld.current.md",
+      "sha256": "1fff90a505ff8f70f5f9ce1632d37406ac07bc5a0ad8627bcbcf1f2ac2dedebe",
+      "classification": "OPTIONAL_EXAMPLE"
+    },
+    {
+      "url": "https://github.com/nearai/near-hackathon-prompt-examples/blob/main/tracks/06-security.md",
+      "localSnapshot": "sources/06-security.current.md",
+      "sha256": "8121bf2b6d2ca5734f190705d401c8a14c24ee56c27ba75bd77b291b96e176e0",
+      "classification": "OPTIONAL_EXAMPLE"
+    },
+    {
+      "url": "https://github.com/nearai/near-hackathon-prompt-examples/blob/main/tracks/04-business.md",
+      "localSnapshot": "sources/04-business.current.md",
+      "sha256": "f170db133c7604eca99e639545b2e18a26652a96d80d31fd2dbefd19bfdf7400",
+      "classification": "OPTIONAL_EXAMPLE"
+    }
+  ],
+  "screening": {
+    "sourceRule": "Q-017",
+    "tasks": [
+      "reproducibility check",
+      "feature verification",
+      "structured report",
+      "preliminary score"
+    ],
+    "finalDecisionMaker": "human judges",
+    "lowAiScoreAloneCanReject": false,
+    "publishedNumericWeights": null,
+    "publishedPassScore": null,
+    "published99Threshold": false
+  },
+  "historicalGuidance": {
+    "source": "https://nearhackathon.com/",
+    "themes": [
+      "technical implementation",
+      "design",
+      "impact",
+      "originality",
+      "sustainability"
+    ],
+    "officialCurrentEqualWeights": false,
+    "classification": "GUIDANCE_FROM_PREVIOUS_HACKATHONS"
+  },
+  "mandatoryPublicationAndEligibilityRules": [
+    {
+      "id": "P01",
+      "requirement": "Public repository by development deadline and through judging",
+      "source": "Procedure 1; Q-014"
+    },
+    {
+      "id": "P02",
+      "requirement": "LICENSE file; any license permitted",
+      "source": "Q-014"
+    },
+    {
+      "id": "P03",
+      "requirement": "Public X demo post stating built at NEAR HACKATHON, with official account mention, hashtag and attached media",
+      "source": "Start here 3; Procedure 2"
+    },
+    {
+      "id": "P04",
+      "requirement": "For local-only demos, reproducible README and video; screenshots alone insufficient",
+      "source": "Q-012"
+    },
+    {
+      "id": "P05",
+      "requirement": "One submission per project and repository, with actual human-provided data and consent",
+      "source": "Start here; What the human decides; Submission API"
+    },
+    {
+      "id": "P06",
+      "requirement": "Judged development from 2026-10-19 to 2026-11-14; disclose prior baseline and diff when applicable",
+      "source": "Q-001 through Q-005"
+    },
+    {
+      "id": "P07",
+      "requirement": "Maximum two independent projects per person; disclose the other name in each README when applicable",
+      "source": "Q-015"
+    }
+  ],
+  "explicitlyAllowed": [
+    {
+      "condition": "testnet-only projects in all tracks",
+      "source": "Q-010"
+    },
+    {
+      "condition": "own NEAR contract fitting the track, without mandatory partner integrations",
+      "source": "Q-011"
+    },
+    {
+      "condition": "local-only deployment, with the specified repository/README/video requirements",
+      "source": "Q-012"
+    },
+    {
+      "condition": "AI code, libraries, templates and own prior libraries with disclosure",
+      "source": "Q-005"
+    },
+    {
+      "condition": "existing repository, with clear judged diff for prior projects",
+      "source": "Q-002 through Q-004"
+    }
+  ],
+  "notPublishedAsMandatoryOrNumericalDeductions": [
+    "active users",
+    "revenue",
+    "validated demand",
+    "independent external audit",
+    "public SLA",
+    "mainnet settlement",
+    "all partner integrations",
+    "all example-prompt features",
+    "equal 20-point weights for five historical themes"
+  ],
+  "nuances": [
+    "Hosted demo is explicitly a plus under Q-012, but local-only is eligible.",
+    "Absence of an active-user requirement does not prove human judges can never consider usefulness or impact.",
+    "Lack of an external-audit requirement does not make actual security defects irrelevant.",
+    "Testnet eligibility does not permit presenting simulated actions as real settlement.",
+    "Optional prompts include the word Requirements inside example product briefs; these are not universal entry conditions.",
+    "One hundred percent of executed checks passing is a test result, not a 100/100 official project score."
+  ],
+  "recommendedInternalBenchmarks": [
+    {
+      "id": "R01",
+      "name": "clean extraction install and build",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R02",
+      "name": "documented startup and reachable review flow",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R03",
+      "name": "README claim-to-action-to-evidence coverage",
+      "outcomes": [
+        "VERIFIED",
+        "FAILED",
+        "NOT_RUN",
+        "NOT_APPLICABLE"
+      ]
+    },
+    {
+      "id": "R04",
+      "name": "complete company-to-employee payroll flow with explicit real/fixture boundary",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R05",
+      "name": "duplicate, unknown-result, insufficient-funds and pause behavior",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R06",
+      "name": "adversarial dispatch rejected before signing or broadcast",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R07",
+      "name": "external outage, stale quote and late response handling",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R08",
+      "name": "desktop, mobile and keyboard main journeys",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R09",
+      "name": "automated accessibility plus documented manual subset",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R10",
+      "name": "measured startup and journey durations with environment and repeat counts",
+      "outcomes": [
+        "MEASURED",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R11",
+      "name": "archive integrity and private-material exclusion",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    },
+    {
+      "id": "R12",
+      "name": "independent reviewer reproduction without verbal assistance",
+      "outcomes": [
+        "PASS",
+        "FAIL",
+        "NOT_RUN"
+      ]
+    }
+  ],
+  "benchmarkClassification": "INTERNAL_ENGINEERING_CHECKS_NOT_OFFICIAL_SCORING_WEIGHTS",
+  "reportingRecommendation": {
+    "keepSeparate": [
+      "publication eligibility",
+      "observed reproducibility",
+      "verified feature claims",
+      "technical findings",
+      "optional non-official preliminary score"
+    ],
+    "neverPreassignScore": true,
+    "neverCountSkippedChecksAsPassed": true,
+    "requireEvidenceForEveryClaim": true,
+    "includeKnownLimits": true
+  },
+  "changesRecommendedToPriorReport": [
+    "Mark v2's 76/100 as a retired optional internal method, not a score inferred from this contest.",
+    "Remove automatic deductions for no active users, revenue, demand, public SLA, external audit, local-only operation or testnet-only scope.",
+    "Retain actionable code defects, claim mismatches and reproducibility failures with concrete evidence.",
+    "Do not replace unsupported deductions with a predetermined 99-plus result."
+  ]
+}

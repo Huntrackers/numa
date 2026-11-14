@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-11-14T14:53:02.707Z",
+  "status": "PASSED",
+  "fixturePayroll": true,
+  "liveReadOnlyQuote": true,
+  "providerSignatureVerified": true,
+  "fundsMoved": 0,
+  "realSalaryEvidence": "Recorded historical testnet receipts, not the fixture payroll",
+  "screenshots": [
+    "qa/v3-trust-desktop.png",
+    "qa/v3-policy-desktop.png",
+    "qa/v3-payroll-preview.png",
+    "qa/v3-payroll-credited.png",
+    "qa/v3-goals-desktop.png",
+    "qa/v3-intents-desktop.png",
+    "qa/v3-receipts-desktop.png",
+    "qa/v3-trust-mobile.png",
+    "qa/v3-intents-mobile.png"
+  ],
+  "mobileOverflow": false,
+  "pageErrors": [],
+  "video": "qa/numa-v3-walkthrough.webm"
+}

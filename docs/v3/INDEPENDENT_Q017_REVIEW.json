@@ -1,0 +1,315 @@
+{
+  "product": "numa",
+  "version": "3.0.0",
+  "reviewedOn": "2026-11-06",
+  "classification": "INDEPENDENT_PRELIMINARY_REVIEW_NOT_OFFICIAL_JUDGING",
+  "official_rules_checked": {
+    "retrievedOn": "2026-11-06",
+    "sources": [
+      "https://nearhackathon.com/",
+      "https://nearhackathon.com/HACKATHON.md"
+    ],
+    "markdownSha256": "86654c13521fe629493bf498d41c0f7573047867d67fcdd8c2543411fc13062f",
+    "rules": {
+      "Q-017": "Reproduction, feature verification, report and preliminary score; humans decide.",
+      "Q-010": "Testnet-only accepted.",
+      "Q-011": "Integrations and example prompts are optional.",
+      "Q-012": "Local-only accepted with public repository, reproducible README and X video.",
+      "Q-014": "LICENSE and public repository through judging.",
+      "Q-015": "At most two independent projects; reciprocal README disclosure when applicable."
+    },
+    "publishedNumericWeights": null,
+    "published99Threshold": false
+  },
+  "environment": {
+    "os": "Microsoft Windows NT10.0.26300.0",
+    "architecture": "x64",
+    "node": "v24.16.0",
+    "npm": "11.13.0",
+    "browser": "Installed Chromium executable selected by packaged browser resolver; headless Playwright",
+    "install": "Fresh extracted source with no pre-existing node_modules or .env",
+    "nativeContract": "Separately rerun before packaging:29passed,0failed,1ignored; not rebuilt in this extraction"
+  },
+  "commands_executed": [
+    {
+      "command": "ZIP manifest/file/private-path verification",
+      "exitCode": 0,
+      "result": "221original entries matched;222corrected entries matched"
+    },
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "result": "234packages installed;8low advisories"
+    },
+    {
+      "command": "npm run verify -- --browser (original package)",
+      "exitCode": 1,
+      "result": "Stopped at formatting of generated SOURCE_MANIFEST.json; failure retained"
+    },
+    {
+      "command": "npm run verify -- --browser (corrected candidate)",
+      "exitCode": 0,
+      "result": "227unit/API,10HTTP checks,47browser; no browser skips/flakes",
+      "durationMs": 146560
+    },
+    {
+      "command": "Read-only NEAR testnet RPC queries",
+      "exitCode": 0,
+      "result": "V3 code hash,accounting,credited obligation,migration and withdrawal success confirmed"
+    },
+    {
+      "command": "ReadOnlyIntents.preview through packaged implementation",
+      "exitCode": 0,
+      "result": "Fresh provider signature verified;dry:true;fundsMoved:false;executionEnabled:false"
+    },
+    {
+      "command": "npm audit --json",
+      "exitCode": 1,
+      "result": "8low;0moderate/high/critical;no automatic fixes"
+    }
+  ],
+  "claim_results": [
+    {
+      "id": "N01",
+      "expected_action_and_result": "Company sets roles, salary schedules and bulk amendments; preview explains each change.",
+      "status": "VERIFIED",
+      "observation": "Fresh API/domain and browser workflows; public amendment receipts are historical corroboration.",
+      "code_and_tests": "tests/live.test.ts; tests/domain.test.ts; tests/e2e/workflows.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N02",
+      "expected_action_and_result": "Authorize a fully funded mandate; worker credits each obligation once.",
+      "status": "VERIFIED",
+      "observation": "Fresh isolated HTTP journey credits five fixture salaries exactly once; prior independent native tests and current public credited obligation corroborate real contract behavior.",
+      "code_and_tests": "scripts/review-smoke.ts; tests/service.test.ts; contracts/payroll-vault/src/lib.rs",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N03",
+      "expected_action_and_result": "Changed network, receiver, method, key capability or contract hash stops dispatch.",
+      "status": "VERIFIED",
+      "observation": "Pure policy drill is correctly labelled synthetic; API dispatch and worker broadcast-boundary tests additionally execute the real guard paths with mocked transport.",
+      "code_and_tests": "packages/near-adapter/src/safety.ts; tests/review.test.ts; tests/worker-safety.test.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N04",
+      "expected_action_and_result": "Employee claims eligible salary despite automation pause and withdraws own cash.",
+      "status": "VERIFIED",
+      "observation": "Prior independently run native pause/claim and withdrawal tests; fresh API/UI affordances; independent RPC confirms recorded V3 withdrawal and callback success.",
+      "code_and_tests": "contracts/payroll-vault/src/lib.rs; tests/live.test.ts; tests/e2e/live.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N05",
+      "expected_action_and_result": "Employee goal policy allocates payday atomically, preserves floor and integer rounding.",
+      "status": "VERIFIED",
+      "observation": "Shared TypeScript/Rust vectors and native contract tests; fresh employee goal, contribution-basis and allocation browser checks.",
+      "code_and_tests": "tests/savings.test.ts; tests/fixtures/goal-vectors.json; tests/e2e/workflows.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N06",
+      "expected_action_and_result": "Reconciled journal balances and an older backup recovers finalized data.",
+      "status": "VERIFIED",
+      "observation": "Fresh backup/reconciliation tests and balanced entries for every salary in the HTTP fixture journey.",
+      "code_and_tests": "tests/release-recovery.test.ts; tests/backups.test.ts; scripts/review-smoke.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N07",
+      "expected_action_and_result": "Correct an invalid transaction hash; keep unknown outcomes locked instead of resending.",
+      "status": "VERIFIED",
+      "observation": "Fresh API and five browser recovery scenarios cover corrected proof, unresolved alternatives, initial rollback and refunded withdrawal.",
+      "code_and_tests": "tests/v3-recovery.test.ts; tests/rpc.test.ts; tests/e2e/recovery-ui.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N08",
+      "expected_action_and_result": "Identity, tenant and operator boundaries prevent unrelated account access and spending.",
+      "status": "VERIFIED",
+      "observation": "Fresh authentication/tenant/API tests; operator spending returns403; pinned Meteor adapter initializes under CSP. Browser signing results are fixtures.",
+      "code_and_tests": "tests/auth.test.ts; tests/production.test.ts; tests/e2e/wallet.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N09",
+      "expected_action_and_result": "Request a signed USDC Base-to-NEAR route preview with exact amounts and expiry.",
+      "status": "VERIFIED",
+      "observation": "Fresh public provider request through packaged ReadOnlyIntents returns signatureVerified:true,dry:true,fundsMoved:false,executionEnabled:false; UI expiry/outage/late-response tests pass.",
+      "code_and_tests": "apps/api/src/intents.ts; fresh-intents-readonly.json; tests/e2e/trust.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N10",
+      "expected_action_and_result": "DCA, investment, Earn, loans and Flexible Payday remain in the labelled simulation book.",
+      "status": "VERIFIED",
+      "observation": "Fresh domain/API/browser workflows and source boundary inspection. No real market settlement is inferred.",
+      "code_and_tests": "tests/v1.test.ts; tests/e2e/workflows.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N11",
+      "expected_action_and_result": "Assistant offers a typed proposal that needs server validation and human confirmation.",
+      "status": "VERIFIED",
+      "observation": "Fresh model validation and browser confirmation tests; source exposes no model signing path. Optional live Ollama explanation is separately NOT_RUN.",
+      "code_and_tests": "tests/model.test.ts; tests/e2e/workflows.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N12",
+      "expected_action_and_result": "Navigate company, employee and operator workspaces on desktop/mobile and by keyboard.",
+      "status": "VERIFIED",
+      "observation": "47 browser tests passed, including axe audits,390px viewport,focus restoration,table scrolling,dialog Escape guard and return navigation.",
+      "code_and_tests": "tests/e2e/accessibility.spec.ts; tests/e2e/v3-ux.spec.ts; tests/e2e/navigation.spec.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "N13",
+      "expected_action_and_result": "Start judge mode without keys; obtain an isolated temporary fixture workspace.",
+      "status": "VERIFIED",
+      "observation": "Fresh HTTP startup1056ms; signer environment variables are removed and a new temporary database is used.",
+      "code_and_tests": "scripts/judge.ts; scripts/review-smoke.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "L01",
+      "expected_action_and_result": "Complete a new real testnet journey through an interactive human Meteor wallet.",
+      "status": "NOT_RUN",
+      "observation": "No wallet signatures or new chain transactions authorized in this review. Existing real receipts were independently inspected; browser signing boundaries were mocked.",
+      "code_and_tests": "docs/v3/LIVE_PRODUCT_V3.json; public-chain-evidence.json",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    },
+    {
+      "id": "L02",
+      "expected_action_and_result": "Run optional local Ollama generation.",
+      "status": "NOT_RUN",
+      "observation": "Optional model runtime is excluded from source; typed proposal safeguards were tested without relying on generation.",
+      "code_and_tests": "README.md; tests/model.test.ts",
+      "evidence": "public-evidence/unit.json; public-evidence/browser.json; public-evidence/review-smoke.json; CONTRACT_REPAIR_VALIDATION.md as applicable"
+    }
+  ],
+  "reproducibility_result": {
+    "status": "PASS_AFTER_PACKAGING_REPAIR",
+    "archiveSha256": "8d32b1b31842b185456ec4296f13b7296f2a3fbf943ac48ab42c8af26d6f52fc",
+    "originalManifestEntries": 221,
+    "correctedManifestEntries": 222,
+    "correctedManifestSha256": "82de3b229c7098c16f902fd590b53118abd3a22b01fcd0dc5bbfb05eba63433b",
+    "finalSetupSha256": "f78a4be0ffb7eda1b6401f3b9f6dfa0ae27ae8fc1a97b748a0e9309c88679c5b",
+    "sourceDigest": "c043536caa64400e2453c062fb53c327a6175035bb20b04004ed7a2ef3b391fe",
+    "sourceUnchanged": true,
+    "approvedUpdates": [
+      "scripts/export-source.mjs",
+      "scripts/testnet-setup.ts",
+      "scripts/review-walkthrough.ts",
+      "SOURCE_MANIFEST.json",
+      "docs/REVIEW_WALKTHROUGH_V3.json",
+      "docs/REVIEW_WALKTHROUGH_V2.json"
+    ],
+    "privateMaterial": "No private .env,DB,key directory or private-key pattern found; two long Ed25519 strings reviewed as public provider signatures."
+  },
+  "findings": [
+    {
+      "id": "R-P2-01",
+      "severity": "P2",
+      "status": "CLOSED",
+      "title": "Exported manifest failed the documented verifier formatting gate",
+      "reproduce": "Fresh extraction; npm ci; npm run verify -- --browser.",
+      "evidence": "original-package-format-failure.log; original-package-verification.json",
+      "location": "scripts/export-source.mjs manifest generation; package.json format:check",
+      "repair": "Exporter formats the manifest with installed Prettier/repo config; fresh corrected run passed."
+    },
+    {
+      "id": "R-P3-01",
+      "severity": "P3",
+      "status": "OPEN_DISCLOSED_DEPENDENCY_OBSERVATION",
+      "title": "Eight low dependency advisory entries remain",
+      "detail": "Elliptic advisory propagates through secp256k1 and NEAR-JS dependencies. No exploitability of the product Ed25519 paths was established. No moderate/high/critical entry was reported.",
+      "evidence": "npm-audit.json",
+      "recommendation": "Track compatible upstream remediation; do not apply a breaking forced update during release."
+    }
+  ],
+  "track_fit": {
+    "primary": "Real-World Money: funded payroll and employee savings settle on NEAR testnet.",
+    "secondary": "AI Security & Defense: restricted executor,shared dispatch guard,authority separation and explicit synthetic policy lab.",
+    "partial": "Autonomous Business: bounded payroll automation,not full autonomous company management.",
+    "scope": "Optional ecosystem prompts and product suggestions are not universal entry requirements."
+  },
+  "publication_gates": [
+    {
+      "item": "Public repository through judging and reproducible README",
+      "rule": "Procedure1;Q-014",
+      "status": "OPEN_OWNER_ACTION"
+    },
+    {
+      "item": "Public X demo video and required tag/mention for local-only release",
+      "rule": "Q-012;Procedure2",
+      "status": "OPEN_OWNER_ACTION"
+    },
+    {
+      "item": "LICENSE",
+      "rule": "Q-014",
+      "status": "PRESENT"
+    },
+    {
+      "item": "Actual contact/team/payout details,consent and approved submission",
+      "rule": "Submission procedure",
+      "status": "OPEN_OWNER_ACTION"
+    },
+    {
+      "item": "Pre-window baseline/judged diff and other independent project disclosure if applicable",
+      "rule": "Q-001–005;Q-015",
+      "status": "OWNER_VERIFICATION_REQUIRED"
+    }
+  ],
+  "preliminary_score": {
+    "value": 95,
+    "outOf": 100,
+    "classification": "NON_OFFICIAL_OBSERVED_DELIVERY_AND_ASSURANCE_SCORE",
+    "notOfficialWeights": true,
+    "method": [
+      {
+        "criterion": "Reproducibility and artifact integrity",
+        "awarded": 25,
+        "maximum": 25,
+        "reason": "Corrected manifest,locked clean install,build and documented verifier all independently reproduced."
+      },
+      {
+        "criterion": "Advertised behavior and observable evidence",
+        "awarded": 28,
+        "maximum": 30,
+        "reason": "Bounded claims reproduced;2points withheld because a new end-to-end human-wallet journey was not independently performed."
+      },
+      {
+        "criterion": "Failure behavior and execution assurance",
+        "awarded": 23,
+        "maximum": 25,
+        "reason": "1point withheld for absence of a full-size Wasm callback gas profile;1for the8remaining low dependency advisory entries."
+      },
+      {
+        "criterion": "Interface and accessibility evidence",
+        "awarded": 14,
+        "maximum": 15,
+        "reason": "Broad browser/axe/mobile/keyboard coverage;1point withheld because manual assistive-technology coverage was not performed."
+      },
+      {
+        "criterion": "Claim clarity and track fit",
+        "awarded": 5,
+        "maximum": 5,
+        "reason": "Real testnet,read-only market data and simulation are explicitly separated;primary track fit is concrete."
+      }
+    ],
+    "interpretation": "A bounded prototype evidence score,not a security guarantee or forecast of jury ranking. Evidence gaps reduce confidence,not eligibility. No points withheld for no active users,revenue,mainnet,hosting,SLA,external audit or unfinished publication.95is not rounded toward the desired99."
+  },
+  "limitations": [
+    "Native tests do not meter all Wasm instructions; actual small-state testnet receipts are corroborated separately.",
+    "Browser tests intentionally mock selected authentication,signature and transaction boundaries.",
+    "No new wallet signatures,chain transactions,mainnet transfers,publication or submission were performed.",
+    "No manual screen-reader/device study or production-scale load test.",
+    "Optional local model was not run.",
+    "Source manifest excludes itself; archive integrity is separately hashed.",
+    "Final metadata-only additions require final manifest regeneration and hash verification; substantive code changes require renewed checks."
+  ],
+  "conclusion": "The corrected candidate reproduces successfully and supports its bounded README claims. No remaining confirmed product blocker was found in this review. The original packaging defect is closed; low dependency advisories and the stated evidence limits remain. Publication eligibility is still conditional on the owner completing the listed official gates."
+}

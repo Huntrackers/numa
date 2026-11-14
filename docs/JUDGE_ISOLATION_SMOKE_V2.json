@@ -1,0 +1,10 @@
+{
+  "checkedAt": "2026-11-06T14:12:24.477Z",
+  "status": "PASSED",
+  "version": "2.0.0",
+  "privateDatabaseUnchanged": true,
+  "freshFixtureObligations": 0,
+  "fixtureLogin": true,
+  "automaticSignerObserved": false,
+  "localEnvLoaded": false
+}

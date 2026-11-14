@@ -1,0 +1,54 @@
+{
+  "checkedAt": "2026-11-06T11:54:48.421Z",
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "obligationId": "v1_052df95ef3be43019890aea347a32ecb",
+  "checks": [
+    "legacy opening snapshot",
+    "owner amendments",
+    "expiry and owner-only renewal",
+    "restricted executor",
+    "duplicate execution",
+    "same-block financial summary",
+    "balanced journal replay",
+    "duplicate reconciliation"
+  ],
+  "receipts": [
+    {
+      "method": "authorize_mandate",
+      "txHash": "J8UwUSGNVgi5zS47dKAb5bwqQQq3zFeLb2PNVi8wTiFf"
+    },
+    {
+      "method": "replace_future_obligations",
+      "txHash": "5CaSBjLnmqnVDUujmJKeXQpNcmrcrHTrA3uU3dwkiTGL"
+    },
+    {
+      "method": "replace_future_obligations",
+      "txHash": "6Tdb4VQ5yJcPQwWtiPqcCsiMXiKqjB9efbhiNjTck28S"
+    },
+    {
+      "method": "pause_mandate",
+      "txHash": "EH6QWwDCKi2mM72nPRV9BBJUdsWGrswX4x8xVv6SoTzX"
+    },
+    {
+      "method": "renew_mandate",
+      "txHash": "7BZopRZ4yyrkjf9XcefqiVNwmiNfiMHKU1hwTVMLrQyb"
+    },
+    {
+      "method": "pause_mandate",
+      "txHash": "42mY1sbP3fXULrjXsxLeJNqfsiNdGoLeYqfpHCqUwPLM"
+    },
+    {
+      "method": "execute_due",
+      "txHash": "5rVEcXSHkmR2XsWPDr5U13Auzjp8oBzojJmLk2gvJXVk"
+    },
+    {
+      "method": "execute_due",
+      "txHash": "4D3wsKzySZ1QGVFLcBTBCjNbFg42muoTZprhon6tLKvR"
+    }
+  ],
+  "openingSequence": 53,
+  "finalSequence": 61,
+  "journalEntries": 12,
+  "accounting": "VERIFIED"
+}

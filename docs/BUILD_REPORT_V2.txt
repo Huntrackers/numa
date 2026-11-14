@@ -1,0 +1,38 @@
+
+> numa@2.0.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 1717 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/web/index.html                                              0.68 kB │ gzip:  0.40 kB
+dist/web/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2    8.52 kB
+dist/web/assets/manrope-greek-wght-normal-DL7QRZyv.woff2         9.44 kB
+dist/web/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2     14.50 kB
+dist/web/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2    15.12 kB
+dist/web/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2    18.22 kB
+dist/web/assets/manrope-latin-wght-normal-DHIcAJRg.woff2        24.83 kB
+dist/web/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB
+dist/web/assets/Trust-D6c8cDyL.css                               6.24 kB │ gzip:  1.71 kB
+dist/web/assets/index-CVTSum74.css                              45.65 kB │ gzip: 12.87 kB
+dist/web/assets/plus-BioIn0Ac.js                                 0.14 kB │ gzip:  0.14 kB
+dist/web/assets/download-DeS_pKQi.js                             0.22 kB │ gzip:  0.18 kB
+dist/web/assets/external-link-BC89nHLz.js                        0.24 kB │ gzip:  0.19 kB
+dist/web/assets/refresh-cw-ghu4dG8d.js                           0.31 kB │ gzip:  0.21 kB
+dist/web/assets/rolldown-runtime-WkwZ5CU-.js                     0.59 kB │ gzip:  0.36 kB
+dist/web/assets/SavingsRules-B7QhbUFM.js                         2.22 kB │ gzip:  0.92 kB
+dist/web/assets/Assistant-DNiBh5O2.js                            4.83 kB │ gzip:  2.02 kB
+dist/web/assets/LiveDecision-B73EiXlL.js                         5.59 kB │ gzip:  2.21 kB
+dist/web/assets/Network-U4O2i0VH.js                             14.10 kB │ gzip:  4.43 kB
+dist/web/assets/Admin-8o7UC5QZ.js                               15.11 kB │ gzip:  4.36 kB
+dist/web/assets/Trust-Dr9_TO3Z.js                               16.83 kB │ gzip:  5.77 kB
+dist/web/assets/Company-B_4aRjJV.js                             23.36 kB │ gzip:  7.01 kB
+dist/web/assets/Live-BrSoNb-3.js                                24.95 kB │ gzip:  7.65 kB
+dist/web/assets/wallet-1oKdKo1u.js                              30.16 kB │ gzip:  9.56 kB
+dist/web/assets/Employee-DLhDkW52.js                            46.80 kB │ gzip: 12.90 kB
+dist/web/assets/build-DB31hh0L.js                               58.78 kB │ gzip: 15.03 kB
+dist/web/assets/index-B8MIIPI4.js                              301.93 kB │ gzip: 96.19 kB
+
+✓ built in 314ms

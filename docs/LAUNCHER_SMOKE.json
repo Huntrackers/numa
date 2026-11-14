@@ -1,0 +1,45 @@
+{
+  "checkedAt": "2026-11-06T01:58:12.6130083Z",
+  "passed": true,
+  "checks": [
+    "Start API, worker and project model",
+    "Repeated launch preserved all process IDs",
+    "Stop removed all three recorded processes",
+    "Restart restored services without deleting data",
+    "Second repeated launch preserved all process IDs",
+    "HTTP health and local model tags available"
+  ],
+  "processes": [
+    {
+      "role": "api",
+      "id": 31292,
+      "startedAt": "2026-11-06T01:58:07.8007147Z",
+      "marker": "D:\\NEAR Hackathon\\Project\\apps\\api\\src\\server.ts"
+    },
+    {
+      "role": "model",
+      "id": 31752,
+      "startedAt": "2026-11-06T01:58:09.8905289Z",
+      "marker": "D:\\NEAR Hackathon\\Project\\tools\\ollama\\runtime\\ollama.exe"
+    },
+    {
+      "role": "worker",
+      "id": 14000,
+      "startedAt": "2026-11-06T01:58:07.8534876Z",
+      "marker": "D:\\NEAR Hackathon\\Project\\apps\\worker\\src\\index.ts"
+    }
+  ],
+  "health": {
+    "status": "ok",
+    "name": "Noma",
+    "version": "0.1.0",
+    "network": "testnet",
+    "worker": "2026-11-06T01:58:08.274Z"
+  },
+  "models": [
+    {
+      "name": "qwen2.5:1.5b",
+      "size": 986061892
+    }
+  ]
+}

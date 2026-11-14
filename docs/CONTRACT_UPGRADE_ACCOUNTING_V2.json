@@ -1,0 +1,15 @@
+{
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "network": "testnet",
+  "txHash": "BbuW2TFcCHLsw5EMCzuPskwmywjFVtUNkRWTESMKQwbo",
+  "wasmSha256": "02fa7d55a14a70984e40e32960a5f309e5b011896f7726232717fbc6ea9758d0",
+  "checkedAt": "2026-11-06T11:33:45.922Z",
+  "stateLayoutChanged": false,
+  "release": "accounting-v2",
+  "addedMethods": [
+    "set_goal_policy_v2",
+    "renew_mandate",
+    "get_event_details",
+    "financial_summary"
+  ]
+}

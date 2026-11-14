@@ -1,0 +1,11 @@
+{
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "network": "testnet",
+  "txHash": "AyMMzswEzrX69MHYgYN1q59ZzUD5xpNBnU4vk3KxjZ6y",
+  "wasmSha256": "8c91db39a75f8abac622fff0166a05e1f017eb0d74aca98ca16e8f87faf3547c",
+  "checkedAt": "2026-11-06T07:52:07.425Z",
+  "stateLayoutChanged": false,
+  "addedMethods": [
+    "fund_treasury_once"
+  ]
+}

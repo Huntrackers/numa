@@ -1,0 +1,9 @@
+{
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "owner": "noma-owner-mw4ab6ev.testnet",
+  "employee": "noma-employee-mw4ab6ev.testnet",
+  "executor": "noma-executor-mw4ab6ev.testnet",
+  "deployedAt": "2026-11-06T01:31:44.331Z",
+  "deploymentHash": "5ix8rmJmCQrrbfwLCwVJduKjThoum6nJbrvvXXTosfmC"
+}

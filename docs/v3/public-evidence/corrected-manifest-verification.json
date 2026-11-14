@@ -1,0 +1,15 @@
+{
+  "checkedAt": "2026-11-06T15:35:44.3108689Z",
+  "manifestSha256": "82DE3B229C7098C16F902FD590B53118ABD3A22B01FCD0DC5BBFB05EBA63433B",
+  "entries": 222,
+  "updatedPaths": [
+    "scripts/export-source.mjs",
+    "scripts/testnet-setup.ts",
+    "scripts/review-walkthrough.ts",
+    "SOURCE_MANIFEST.json",
+    "docs/REVIEW_WALKTHROUGH_V3.json",
+    "docs/REVIEW_WALKTHROUGH_V2.json"
+  ],
+  "mismatches": [],
+  "status": "PASS"
+}

@@ -1,0 +1,82 @@
+{
+  "product": "numa",
+  "version": "3.0.0",
+  "startedAt": "2026-11-06T15:35:49.609Z",
+  "completedAt": "2026-11-06T15:38:16.170Z",
+  "status": "PASS",
+  "durationMs": 146560,
+  "platform": "win32",
+  "architecture": "x64",
+  "node": "v24.16.0",
+  "sourceDigest": "c043536caa64400e2453c062fb53c327a6175035bb20b04004ed7a2ef3b391fe",
+  "sourceUnchangedDuringVerification": true,
+  "requestedProfile": {
+    "browser": true,
+    "contract": false
+  },
+  "steps": [
+    {
+      "name": "environment",
+      "command": "npm run doctor -- --browser",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 661,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/environment.txt"
+    },
+    {
+      "name": "format",
+      "command": "npm run format:check",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 1858,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/format.txt"
+    },
+    {
+      "name": "unit-api",
+      "command": "npm run test -- --reporter=json --outputFile=C:\\Users\\User\\Documents\\Codex\\2026-11-02\\11-2-2026-4-21-pm\\numa-v3\\independent-review\\reproduction\\candidate-20261106\\review-source\\artifacts\\verify\\2026-11-06T15-35-49-609Z\\unit.json",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 26498,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/unit-api.txt"
+    },
+    {
+      "name": "build",
+      "command": "npm run build",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 4821,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/build.txt"
+    },
+    {
+      "name": "http-journey",
+      "command": "npm run review:smoke",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 4678,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/http-journey.txt"
+    },
+    {
+      "name": "browser",
+      "command": "npm run test:e2e -- --reporter=list,json",
+      "status": "PASS",
+      "exitCode": 0,
+      "durationMs": 107973,
+      "log": "artifacts/verify/2026-11-06T15-35-49-609Z/browser.txt"
+    },
+    {
+      "name": "contract",
+      "command": "npm run test:contract",
+      "status": "NOT_REQUESTED"
+    }
+  ],
+  "scoring": {
+    "officialScore": null,
+    "internalProjectScore": null,
+    "note": "Passing checks is evidence, not a contest score."
+  },
+  "boundaries": [
+    "No mainnet transfers or human wallet signatures are performed.",
+    "The HTTP journey is an isolated fixture journey.",
+    "Live provider availability is checked separately using npm run intents:smoke."
+  ]
+}

@@ -1,0 +1,36 @@
+
+> numa@1.0.0 build
+> tsc --noEmit && vite build --config apps/web/vite.config.ts
+
+vite v8.3.6 building client environment for production...
+transforming...
+✓ 1715 modules transformed.
+rendering chunks...
+computing gzip size...
+dist/web/index.html                                              0.68 kB │ gzip:  0.39 kB
+dist/web/assets/manrope-vietnamese-wght-normal-usUDDRr7.woff2    8.52 kB
+dist/web/assets/manrope-greek-wght-normal-DL7QRZyv.woff2         9.44 kB
+dist/web/assets/manrope-cyrillic-wght-normal-Dvxsihut.woff2     14.50 kB
+dist/web/assets/manrope-latin-ext-wght-normal-Ch3YOpNY.woff2    15.12 kB
+dist/web/assets/dm-sans-latin-ext-wght-normal-BOFOeGcA.woff2    18.22 kB
+dist/web/assets/manrope-latin-wght-normal-DHIcAJRg.woff2        24.83 kB
+dist/web/assets/dm-sans-latin-wght-normal-Xz1IZZA0.woff2        36.93 kB
+dist/web/assets/index-CVTSum74.css                              45.65 kB │ gzip: 12.87 kB
+dist/web/assets/plus-3Zz1Yrjx.js                                 0.14 kB │ gzip:  0.14 kB
+dist/web/assets/download-Id0ZLXYw.js                             0.22 kB │ gzip:  0.18 kB
+dist/web/assets/external-link-DBoDkyNb.js                        0.24 kB │ gzip:  0.19 kB
+dist/web/assets/refresh-cw-dzoZIuyK.js                           0.31 kB │ gzip:  0.22 kB
+dist/web/assets/rolldown-runtime-WkwZ5CU-.js                     0.59 kB │ gzip:  0.36 kB
+dist/web/assets/SavingsRules-B7QhbUFM.js                         2.22 kB │ gzip:  0.92 kB
+dist/web/assets/Assistant-C3PNEhYs.js                            4.82 kB │ gzip:  2.02 kB
+dist/web/assets/LiveDecision-Bc6LfKt1.js                         5.59 kB │ gzip:  2.21 kB
+dist/web/assets/Network-BLJZoFdA.js                             14.09 kB │ gzip:  4.42 kB
+dist/web/assets/Admin-DHHTHycb.js                               15.11 kB │ gzip:  4.35 kB
+dist/web/assets/Company-5yZD1kb1.js                             23.36 kB │ gzip:  7.00 kB
+dist/web/assets/Live-B83PAgLE.js                                24.96 kB │ gzip:  7.65 kB
+dist/web/assets/wallet-L0hBSe-j.js                              30.16 kB │ gzip:  9.56 kB
+dist/web/assets/Employee-3Poo1r9M.js                            46.80 kB │ gzip: 12.90 kB
+dist/web/assets/build-DB31hh0L.js                               58.78 kB │ gzip: 15.03 kB
+dist/web/assets/index-CboosABt.js                              301.36 kB │ gzip: 96.02 kB
+
+✓ built in 320ms

@@ -1,0 +1,61 @@
+{
+  "checkedAt": "2026-11-06T15:25:07.896Z",
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "checks": [
+    "Two genuine NEP-413 identities",
+    "Private company creation and NEAR registration",
+    "Invitation and employee acceptance from ordinary product metadata",
+    "Treasury funding through a verified prepared operation",
+    "Duplicate funding operation rejected without a second credit",
+    "Salary-linked atomic goal policy",
+    "Calendar-based full-prefunding mandate",
+    "Role-aware bulk salary amendment replaces a future obligation",
+    "One-time bonus stays separate from recurring salary",
+    "Restricted executor automatically credits salary after reconciliation",
+    "Second scan cannot credit the salary twice",
+    "Employee withdrawal with finalized callback verification",
+    "Ordinary company workspace reads finalized payroll"
+  ],
+  "receipts": [
+    {
+      "method": "register_company",
+      "txHash": "3293tvFB6Qc1m9JmRWjXAtDdSn7RCScWDevirYQ5vvrg"
+    },
+    {
+      "method": "register_employee",
+      "txHash": "Hy99rCeQxPZ9VbyL5U8FF2rF8CrMSgFYEDo1rWoJYouX"
+    },
+    {
+      "method": "accept_employment",
+      "txHash": "Ak6WnhAv3SuYTSjr5CATC7khaLiFSTi5WNBeimH4ghvX"
+    },
+    {
+      "method": "fund_treasury_once",
+      "txHash": "8RaVtmbcMrpUTUqLDXFeTPDu8nGoHZ9w4TZT3ts8ATDZ"
+    },
+    {
+      "method": "set_goal_policy_v2",
+      "txHash": "221dgAhrT1tashuv5mtgAC19HiLcHiQzK9MKsHH88jVy"
+    },
+    {
+      "method": "authorize_mandate",
+      "txHash": "ETDsGTSTfxkKucMPCKcv312Sk1oJe4uPiSmu9VsY3Dfq"
+    },
+    {
+      "method": "replace_future_obligations",
+      "txHash": "GYeT6m1Hh12JuZ5esSFcRW3a4JqdXDjxrAeURuU5cHc6"
+    },
+    {
+      "method": "replace_future_obligations",
+      "txHash": "dkmc889WHEVQveXtkwTLQSusHRVMSC9mWV71pGqB17L"
+    },
+    {
+      "method": "request_withdrawal",
+      "txHash": "DsRbL3Z1n14FJSLFcyGvYvhUwJTaTC35vZzyF6rt3bRR"
+    }
+  ],
+  "companyId": "c_9b8652ebbeeaa1e8a19a7d5bcbfb8107",
+  "obligationId": "02382dc82a0aeec9d98fc716d454b8820b00bc3169f2c7846ad31c169626dd66",
+  "reconciliation": "HEALTHY"
+}

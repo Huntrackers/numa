@@ -1,0 +1,38 @@
+.signed-decision-proof {
+  max-width: 440px;
+  margin: 16px 0;
+  font-size: 11px;
+  white-space: normal;
+}
+.numa-network-integrations a {
+  color: var(--harbor);
+}
+.numa-network-integrations a:hover {
+  text-decoration: underline;
+}
+.signed-decision-proof > div {
+  margin-bottom: 12px;
+}
+.signed-decision-proof dt {
+  color: var(--muted);
+  margin-bottom: 3px;
+}
+.signed-decision-proof dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--ink);
+}
+.signed-decision-message {
+  max-width: 440px;
+  max-height: 320px;
+  overflow: auto;
+  padding: 12px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  font-family: inherit;
+  font-size: 11px;
+  line-height: 1.7;
+}

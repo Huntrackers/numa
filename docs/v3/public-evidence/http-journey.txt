@@ -1,0 +1,5 @@
+
+> numa@3.0.0 review:smoke
+> tsx scripts/review-smoke.ts
+
+Review journey: 10 checks passed; startup 1056 ms. Report: C:\Users\User\Documents\Codex\2026-11-02\11-2-2026-4-21-pm\numa-v3\independent-review\reproduction\candidate-20261106\review-source\artifacts\verify\2026-11-06T15-35-49-609Z\review-smoke.json

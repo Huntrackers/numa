@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-06T15:27:36.646Z",
+  "health": {
+    "status": "ok",
+    "name": "numa",
+    "version": "3.0.0",
+    "network": "testnet",
+    "worker": "2026-11-06T15:27:32.251Z"
+  },
+  "openapiLiveRoutes": 7,
+  "testnetWorker": {
+    "state": "RUNNING",
+    "lastSeen": "2026-11-06T15:27:32.620Z",
+    "restrictedMethods": [
+      "execute_due"
+    ],
+    "receiverId": "noma-vault-mw4ab6ev.testnet"
+  },
+  "reconciliation": {
+    "state": "HEALTHY",
+    "accounting": "VERIFIED",
+    "cursor": 71,
+    "lastSuccessAt": "2026-11-06T15:27:14.348Z"
+  },
+  "backup": {
+    "lastSuccessAt": "2026-11-06T08:31:04.857Z",
+    "retention": 7
+  }
+}

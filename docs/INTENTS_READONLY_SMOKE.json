@@ -1,0 +1,41 @@
+{
+  "checkedAt": "2026-11-14T14:50:40.486Z",
+  "mode": "LIVE_READ_ONLY",
+  "provider": "NEAR Intents / 1Click",
+  "network": "mainnet-data-only",
+  "signatureVerified": true,
+  "requestedAt": "2026-11-14T14:50:40.485Z",
+  "expiresAt": "2026-11-14T14:51:10.485Z",
+  "origin": {
+    "assetId": "nep141:base-0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.omft.near",
+    "symbol": "USDC",
+    "blockchain": "base",
+    "decimals": 6
+  },
+  "destination": {
+    "assetId": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+    "symbol": "USDC",
+    "blockchain": "near",
+    "decimals": 6
+  },
+  "amountIn": "100000000",
+  "amountOut": "99979801",
+  "minAmountOut": "98980002",
+  "timeEstimate": 35,
+  "slippageBps": 100,
+  "recipient": "wrap.near",
+  "refundTo": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
+  "dry": true,
+  "executionEnabled": false,
+  "fundsMoved": false,
+  "depositAddress": null,
+  "quoteDigest": "ed25519:5MAHBaxH9gyTjpBA9nKDmYL3t4aYtojLWmRzXHdXGS11o1dJ7mvxjHiAWijJwsQZJG9K4wcixkDgLdNduDcZcgUL",
+  "providerAppFees": [
+    {
+      "recipient": "5880ad2b362620fadf759cbceb1cd5737ce8c6ed7fb8e9942881e6731f9247dd",
+      "fee": 1
+    }
+  ],
+  "feeNote": "The provider fee schedule is reflected in its quoted output. No swap is submitted.",
+  "addresses": "Public documented examples for a dry query only; not project-owned accounts."
+}

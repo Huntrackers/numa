@@ -1,0 +1,9 @@
+
+> numa@2.0.0 db:verify-backup
+> tsx scripts/check-backup.ts
+
+entities 126 rows restored
+ledger_entries 13 rows restored
+ledger_lines 26 rows restored
+outbox 0 rows restored
+SQLite backup restored and integrity checked successfully.

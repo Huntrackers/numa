@@ -1,0 +1,26 @@
+{
+  "source": "C:\\Users\\User\\Documents\\Codex\\2026-11-02\\11-2-2026-4-21-pm\\numa-v3\\independent-review\\reproduction\\candidate-20261106\\review-source",
+  "archiveSha256": "8D32B1B31842B185456EC4296F13B7296F2A3FBF943AC48AB42C8AF26D6F52FC",
+  "manifestEntries": 221,
+  "fileCount": 222,
+  "mismatches": [],
+  "unexpectedFiles": [],
+  "privatePathMatches": [],
+  "privateMaterialPatternMatches": [
+    "docs\\INTENTS_READONLY_SMOKE.json",
+    "tests\\fixtures\\oneclick-signed-dry.json"
+  ],
+  "status": "PASS",
+  "reviewedPatternMatches": [
+    {
+      "file": "docs/INTENTS_READONLY_SMOKE.json",
+      "classification": "public provider Ed25519 signature",
+      "field": "quoteDigest"
+    },
+    {
+      "file": "tests/fixtures/oneclick-signed-dry.json",
+      "classification": "public provider Ed25519 signature",
+      "field": "signature"
+    }
+  ]
+}

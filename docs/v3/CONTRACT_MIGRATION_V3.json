@@ -1,0 +1,21 @@
+{
+  "version": "3.0.0",
+  "status": "PASS",
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "txHash": "9pktZBWMC3Uu85E5oMBsNW5B9DQ8m8d6am9bBQdYihrB",
+  "checkedAt": "2026-11-06T15:22:10.878Z",
+  "previousCodeHash": "CdMHFFPDjW5NNpEbukL5kyzecb4CTY57Rd24onJ3y7M",
+  "codeHash": "EM4NqrNoxHhDHQkPvVzxvwgrTkjt8mNjHduQqNUHoyvW",
+  "wasmSha256": "c64b5d38c3fc355c00506572117dce214902175412f475f883bb8e325e5f824f",
+  "stateLayoutChanged": true,
+  "atomicDeployAndMigrate": true,
+  "beforeBlock": "87NU9TE33bxei6pan6fQWaBs5s49X2d46xs8oLtqxw2X",
+  "afterBlock": "8SUxEr1FMbrJRocTjVXe8wh1YNw7a4ZA9LhHhwsAd1yB",
+  "preservedEvents": 61,
+  "preservedAccountViews": 2,
+  "preservedFinancialFields": true,
+  "storageVersion": 3,
+  "gasBurnt": "82365709786165",
+  "limitation": "Migration evidence applies to this small reviewed snapshot; maximum-size state migration is not claimed."
+}

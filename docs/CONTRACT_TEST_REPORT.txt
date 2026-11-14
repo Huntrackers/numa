@@ -1,0 +1,25 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.43s
+     Running unittests src\lib.rs (contracts\payroll-vault\target\debug\deps\noma_payroll_vault-751c4ad43043405e.exe)
+
+running 18 tests
+test tests::shared_savings_vectors_match_typescript ... ok
+test tests::only_owner_funds - should panic ... ok
+test tests::requires_full_funding - should panic ... ok
+test tests::callback_cannot_be_forged - should panic ... ok
+test tests::duplicate_funding_operation_does_not_credit_twice ... ok
+test tests::executor_cannot_credit_before_payday - should panic ... ok
+test tests::executor_cannot_credit_after_authority_expiry - should panic ... ok
+test tests::executor_cannot_renew_authority - should panic ... ok
+test tests::company_cannot_withdraw_reserved_salary - should panic ... ok
+test tests::renewal_preserves_debt_and_all_balances ... ok
+test tests::unknown_transfer_stays_reserved_and_cannot_be_resubmitted ... ok
+test tests::funded_salary_allocates_goals_atomically ... ok
+test tests::paused_employee_can_claim ... ok
+test tests::goal_reserves_cannot_be_withdrawn - should panic ... ok
+test tests::successful_transfer_reduces_liability_once ... ok
+test tests::failed_transfer_restores_cash_once ... ok
+test tests::v2_goal_release_requires_explicit_reactivation_and_preserves_layout ... ok
+test tests::amendments_cancel_and_events_preserve_financial_invariants ... ok
+
+test result: ok. 18 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.89s
+

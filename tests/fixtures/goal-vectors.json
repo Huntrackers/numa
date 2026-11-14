@@ -1,0 +1,247 @@
+[
+  {
+    "name": "fixed contribution",
+    "total": "1000",
+    "budget": "300",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "600",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE",
+        "contributionMode": "FIXED",
+        "contributionValue": "200",
+        "overflow": "CASH"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "200"
+      ]
+    ]
+  },
+  {
+    "name": "completion surplus to cash",
+    "total": "1000",
+    "budget": "200",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "600",
+        "funded": "550",
+        "priority": 1,
+        "state": "ACTIVE",
+        "overflow": "CASH"
+      },
+      {
+        "id": "b",
+        "name": "b",
+        "target": "10000",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "50"
+      ]
+    ]
+  },
+  {
+    "name": "completion surplus to next",
+    "total": "1000",
+    "budget": "200",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "600",
+        "funded": "550",
+        "priority": 1,
+        "state": "ACTIVE",
+        "overflow": "NEXT"
+      },
+      {
+        "id": "b",
+        "name": "b",
+        "target": "10000",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "50"
+      ],
+      [
+        "b",
+        "150"
+      ]
+    ]
+  },
+  {
+    "name": "explicit salary percentage",
+    "total": "1000",
+    "budget": "300",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "1000",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE",
+        "contributionValue": "1000",
+        "percentBasis": "SALARY",
+        "overflow": "CASH"
+      },
+      {
+        "id": "b",
+        "name": "b",
+        "target": "1000",
+        "funded": "0",
+        "priority": 2,
+        "state": "ACTIVE",
+        "contributionValue": "5000",
+        "percentBasis": "GOAL_BUDGET",
+        "overflow": "CASH"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "100"
+      ],
+      [
+        "b",
+        "150"
+      ]
+    ]
+  },
+  {
+    "name": "priority clips oversubscribed rules",
+    "total": "1000",
+    "budget": "300",
+    "goals": [
+      {
+        "id": "b",
+        "name": "b",
+        "target": "10000",
+        "funded": "0",
+        "priority": 2,
+        "state": "ACTIVE",
+        "contributionMode": "FIXED",
+        "contributionValue": "250"
+      },
+      {
+        "id": "a",
+        "name": "a",
+        "target": "10000",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE",
+        "contributionMode": "FIXED",
+        "contributionValue": "250"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "250"
+      ],
+      [
+        "b",
+        "50"
+      ]
+    ]
+  },
+  {
+    "name": "inactive reserves never reused",
+    "total": "1000",
+    "budget": "300",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "600",
+        "funded": "550",
+        "priority": 1,
+        "state": "PAUSED"
+      },
+      {
+        "id": "b",
+        "name": "b",
+        "target": "100",
+        "funded": "100",
+        "priority": 2,
+        "state": "COMPLETED"
+      },
+      {
+        "id": "c",
+        "name": "c",
+        "target": "100",
+        "funded": "0",
+        "priority": 3,
+        "state": "ARCHIVED"
+      },
+      {
+        "id": "d",
+        "name": "d",
+        "target": "100",
+        "funded": "0",
+        "priority": 4,
+        "state": "DRAFT"
+      }
+    ],
+    "expected": []
+  },
+  {
+    "name": "fraction rounding remains cash",
+    "total": "7",
+    "budget": "3",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "10",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE",
+        "contributionValue": "3333",
+        "overflow": "CASH"
+      }
+    ],
+    "expected": []
+  },
+  {
+    "name": "u128 scale does not overflow",
+    "total": "300000000000000000000000000000000000000",
+    "budget": "150000000000000000000000000000000000000",
+    "goals": [
+      {
+        "id": "a",
+        "name": "a",
+        "target": "300000000000000000000000000000000000000",
+        "funded": "0",
+        "priority": 1,
+        "state": "ACTIVE",
+        "contributionValue": "5000",
+        "percentBasis": "SALARY"
+      }
+    ],
+    "expected": [
+      [
+        "a",
+        "150000000000000000000000000000000000000"
+      ]
+    ]
+  }
+]

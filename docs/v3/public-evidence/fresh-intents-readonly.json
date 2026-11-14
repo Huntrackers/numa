@@ -1,0 +1,57 @@
+{
+  "checkedAt": "2026-11-06T15:37:22.556Z",
+  "status": "PASS",
+  "requests": [
+    {
+      "method": "GET",
+      "path": "https://1click.chaindefuser.com/v0/tokens"
+    },
+    {
+      "method": "POST",
+      "path": "https://1click.chaindefuser.com/v0/quote",
+      "dry": true
+    }
+  ],
+  "mode": "LIVE_READ_ONLY",
+  "provider": "NEAR Intents / 1Click",
+  "network": "mainnet-data-only",
+  "signatureVerified": true,
+  "requestedAt": "2026-11-06T15:37:23.384Z",
+  "expiresAt": "2026-11-06T15:37:53.384Z",
+  "origin": {
+    "assetId": "nep141:base-0x833589fcd6edb6e08f4c7c32d4f71b54bda02913.omft.near",
+    "symbol": "USDC",
+    "blockchain": "base",
+    "decimals": 6
+  },
+  "destination": {
+    "assetId": "nep141:17208628f84f5d6ad33f0da3bbbeb27ffcb398eac501a31bd6ad2011e36133a1",
+    "symbol": "USDC",
+    "blockchain": "near",
+    "decimals": 6
+  },
+  "amountIn": "100000000",
+  "amountOut": "99990563",
+  "minAmountOut": "98990657",
+  "timeEstimate": 35,
+  "slippageBps": 100,
+  "recipient": "wrap.near",
+  "refundTo": "0x2527D02599Ba641c19FEa793cD0F167589a0f10D",
+  "dry": true,
+  "executionEnabled": false,
+  "fundsMoved": false,
+  "depositAddress": null,
+  "quoteDigest": "Public provider signature retained in the review kit evidence/fresh-intents-readonly.json",
+  "providerAppFees": [
+    {
+      "recipient": "5880ad2b362620fadf759cbceb1cd5737ce8c6ed7fb8e9942881e6731f9247dd",
+      "fee": 1
+    }
+  ],
+  "feeNote": "The provider fee schedule is reflected in its quoted output. No swap is submitted.",
+  "packagingNote": {
+    "omitted": "public provider signature, not a private key",
+    "originalEvidenceSha256": "730cc6657758c6d01028fcec032adff74156036ab8cb5560f82ab9484a763a6f",
+    "rawEvidenceLocation": "review-kit/evidence/fresh-intents-readonly.json"
+  }
+}

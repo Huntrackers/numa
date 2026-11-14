@@ -1,0 +1,96 @@
+{
+  "checkedAt": "2026-11-06T14:23:43.473Z",
+  "health": {
+    "status": "ok",
+    "name": "numa",
+    "version": "2.0.0",
+    "network": "testnet",
+    "worker": "2026-11-06T14:23:40.632Z"
+  },
+  "evidence": {
+    "product": "numa",
+    "version": "2.0.0",
+    "observedAt": "2026-11-06T14:23:43.472Z",
+    "network": "testnet",
+    "contract": {
+      "contractId": "noma-vault-mw4ab6ev.testnet",
+      "expectedCodeHash": "CdMHFFPDjW5NNpEbukL5kyzecb4CTY57Rd24onJ3y7M",
+      "observedCodeHash": "CdMHFFPDjW5NNpEbukL5kyzecb4CTY57Rd24onJ3y7M",
+      "codeMatches": true,
+      "observedAt": "2026-11-06T14:23:43.469Z",
+      "blockHeight": 276498133,
+      "blockHash": "HMGDrbgx2e7v74WUBk7yww86FUMwTwJZBgFzaNewUayV"
+    },
+    "worker": {
+      "state": "RUNNING",
+      "fresh": true,
+      "restrictedMethods": [
+        "execute_due"
+      ],
+      "gasSponsorship": "The executor pays testnet gas for scheduled execute_due calls. Interactive employee wallet actions still require their own gas."
+    },
+    "accounting": {
+      "state": "VERIFIED",
+      "syncState": "HEALTHY",
+      "fresh": true,
+      "lastSuccessAt": "2026-11-06T14:23:12.219Z",
+      "eventCursor": 61
+    },
+    "capabilities": [
+      {
+        "feature": "Salary settlement and savings",
+        "mode": "LIVE_TESTNET",
+        "description": "NEAR contract reserves payroll and allocates savings in the same call."
+      },
+      {
+        "feature": "Cross-chain route previews",
+        "mode": "LIVE_READ_ONLY",
+        "description": "Signed 1Click dry quotes. No mainnet transaction or deposit address is created."
+      },
+      {
+        "feature": "Investing, DCA, Earn and loans",
+        "mode": "SIMULATION",
+        "description": "An independent demoUSD planning ledger. No real returns or lending."
+      },
+      {
+        "feature": "Assistant proposals",
+        "mode": "LOCAL_OPTIONAL",
+        "description": "Typed proposals with server validation; the model has no signing tools."
+      }
+    ],
+    "reviewedDeployment": {
+      "contractId": "noma-vault-mw4ab6ev.testnet",
+      "codeHash": "CdMHFFPDjW5NNpEbukL5kyzecb4CTY57Rd24onJ3y7M"
+    },
+    "proofs": [
+      {
+        "label": "Accounting contract upgrade",
+        "hash": "BbuW2TFcCHLsw5EMCzuPskwmywjFVtUNkRWTESMKQwbo",
+        "evidence": "Recorded successful testnet smoke; inspect the public explorer for independent confirmation.",
+        "url": "https://testnet.nearblocks.io/txns/BbuW2TFcCHLsw5EMCzuPskwmywjFVtUNkRWTESMKQwbo"
+      },
+      {
+        "label": "Scheduled salary execution",
+        "hash": "5rVEcXSHkmR2XsWPDr5U13Auzjp8oBzojJmLk2gvJXVk",
+        "evidence": "Recorded successful testnet smoke; inspect the public explorer for independent confirmation.",
+        "url": "https://testnet.nearblocks.io/txns/5rVEcXSHkmR2XsWPDr5U13Auzjp8oBzojJmLk2gvJXVk"
+      },
+      {
+        "label": "Duplicate execution checked",
+        "hash": "4D3wsKzySZ1QGVFLcBTBCjNbFg42muoTZprhon6tLKvR",
+        "evidence": "Recorded successful testnet smoke; inspect the public explorer for independent confirmation.",
+        "url": "https://testnet.nearblocks.io/txns/4D3wsKzySZ1QGVFLcBTBCjNbFg42muoTZprhon6tLKvR"
+      }
+    ],
+    "limits": {
+      "maximumCompanies": 30,
+      "employeesPerCompany": 50,
+      "obligationsPerBatch": 20,
+      "authorizationDays": 31,
+      "mainnetTransactions": false,
+      "stablecoinSettlement": false,
+      "independentAudit": false
+    }
+  },
+  "samplePersonasEnabled": false
+}

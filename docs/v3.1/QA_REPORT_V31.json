@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 1,
+  "reportType": "FINAL_VERIFICATION_WITH_DISCLOSED_LIMITS",
+  "release": "3.1.0",
+  "finalizedAt": "2026-11-06T23:40:05.027275+00:00",
+  "sourceDigest": "7c026b4745f42e307c461461ffb6f28d861bf4bc621f7f84016ea42ed0569df2",
+  "scope": [
+    "public landing",
+    "verified workspace onboarding and registration recovery",
+    "typed account-bound invitations",
+    "NEP-413 approvals for sensitive local decisions",
+    "private signed-decision history",
+    "wallet modal focus and identity cleanup",
+    "receipt confirmation separated from dashboard refresh"
+  ],
+  "checks": {
+    "unitAndApi": {
+      "status": "PASS",
+      "passed": 283,
+      "failed": 0,
+      "evidence": "verification/unit.json"
+    },
+    "browserJourneys": {
+      "status": "PASS",
+      "passed": 74,
+      "failed": 0,
+      "skipped": 0,
+      "flaky": 0,
+      "evidence": "verification/browser.json"
+    },
+    "accessibility": {
+      "status": "AUTOMATED_CHECKS_PASS",
+      "manualCoverage": "Current landing visually checked at1440 and390; no new human assistive-technology certification.",
+      "evidence": ["verification/browser.json", "qa/current-runtime/runtime-check.json"]
+    },
+    "contractRegression": {
+      "status": "PASS",
+      "passed": 29,
+      "failed": 0,
+      "ignored": 1,
+      "ignoredReason": "Optional private V2 snapshot rehearsal; unchanged contract migration was validated separately in V3.",
+      "evidence": "verification/contract.txt"
+    },
+    "buildAndFormatting": {
+      "status": "PASS",
+      "evidence": ["verification/build.txt", "verification/format.txt"]
+    },
+    "testnetSmoke": {
+      "status": "FRESH_FULL_PRODUCT_SMOKE_PASS_WITH_PRIOR_FAILURE_RETAINED",
+      "passed": 14,
+      "initialFailure": "Transient executor access-key read timeout before any executor broadcast; retained original failed log.",
+      "recovery": "Exact retained obligation credited via restricted execute_due; final receipt verified, second scan did not duplicate, accounting VERIFIED/reconciliation HEALTHY.",
+      "freshFullRun": {
+        "checkedAt": "2026-11-06T23:34:16.456Z",
+        "companyId": "c_b4c4100e035986f16cc681cc922bc3d0",
+        "obligationId": "851b4caddd4e11de16928670bd294f52198aea9a75ba2138e9bac899447b82da",
+        "checks": [
+          "Two genuine NEP-413 identities",
+          "Private company creation and NEAR registration",
+          "Sensitive role metadata requires and records a genuine NEAR NEP-413 decision signature",
+          "Invitation and employee acceptance from ordinary product metadata",
+          "Treasury funding through a verified prepared operation",
+          "Duplicate funding operation rejected without a second credit",
+          "Salary-linked atomic goal policy",
+          "Calendar-based full-prefunding mandate",
+          "Role-aware bulk salary amendment replaces a future obligation",
+          "One-time bonus stays separate from recurring salary",
+          "Restricted executor automatically credits salary after reconciliation",
+          "Second scan cannot credit the salary twice",
+          "Employee withdrawal with finalized callback verification",
+          "Ordinary company workspace reads finalized payroll"
+        ]
+      },
+      "evidence": [
+        "evidence/live-product-v31-complete.json",
+        "evidence/live-product-v31-complete.txt",
+        "evidence/live-product-v31.txt",
+        "evidence/live-product-v31-failure-diagnosis.json",
+        "evidence/live-product-v31-recovery.json"
+      ]
+    },
+    "humanMeteorJourney": {
+      "status": "NOT_ESTABLISHED",
+      "evidence": null
+    },
+    "releasePrivacyAndManifest": {
+      "status": "CANDIDATE_VERIFIED_FINAL_ARCHIVE_CHECK_AT_PACKAGING",
+      "evidence": [
+        "SOURCE_MANIFEST.json in source archive",
+        "MANIFEST.json in review kit",
+        "numa-v3.1-checksums.json"
+      ]
+    },
+    "httpFixture": {
+      "status": "PASS",
+      "passed": 10,
+      "evidence": "verification/review-smoke.json"
+    },
+    "intentsReadOnly": {
+      "status": "PASS",
+      "fundsMoved": false,
+      "executionEnabled": false,
+      "providerSignatureVerified": true,
+      "evidence": "evidence/intents-readonly-v31.json"
+    },
+    "runningInstallation": {
+      "status": "PASS",
+      "url": "http://127.0.0.1:4310",
+      "health": {
+        "status": "ok",
+        "name": "numa",
+        "version": "3.1.0",
+        "network": "testnet",
+        "worker": "2026-11-06T23:35:14.262Z"
+      },
+      "onChainSync": [
+        {
+          "state": "HEALTHY",
+          "accounting": "VERIFIED",
+          "cursor": 88,
+          "lastSuccessAt": "2026-11-06T23:34:58.690Z"
+        }
+      ],
+      "testnetWorker": {
+        "state": "RUNNING",
+        "phase": "RUNNING",
+        "lastSeen": "2026-11-06T23:35:14.591Z",
+        "retryable": null
+      },
+      "evidence": "qa/current-runtime/runtime-check.json"
+    }
+  },
+  "approvedSpec": {
+    "path": "docs/final-fa-v1/FINAL_SPEC.fa.md",
+    "expectedSha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618",
+    "releaseVerification": "SHA256_MATCH_UNCHANGED"
+  },
+  "independentReview": {
+    "status": "COMPLETED",
+    "officialCompetitionScore": false,
+    "officialNumericWeightsPublished": false,
+    "evidence": [
+      "docs/v3.1/INDEPENDENT_Q017_REVIEW_V31.json",
+      "docs/v3.1/INDEPENDENT_REVIEW_V31.fa.md"
+    ],
+    "scoreReference": "See reviewer conclusion and explicitly non-official method in independent report."
+  },
+  "limitations": [
+    "A simulated wallet fixture is not an independently performed human Meteor journey.",
+    "Signed local approvals do not prove investment execution or token settlement.",
+    "Real financial actions are NEAR testnet only; mainnet transfers stay disabled."
+  ],
+  "unresolvedFindings": "See independent report; no suppressed findings or fabricated99 threshold.",
+  "evidenceLayout": "Paths are relative to review-kit root unless stated otherwise."
+}

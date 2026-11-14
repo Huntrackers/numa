@@ -1,0 +1,6 @@
+{
+  "model": "qwen2.5:1.5b",
+  "explanation": "When considering salary allocation, it's important to separate your available cash from your savings goals. This helps manage your financial priorities and avoid overspending on non-essential items. Investing, while potentially beneficial, comes with its own set of uncertainties, so it's wise to approach it with caution. Prioritize your financial goals and allocate your salary accordingly, ensuring you're meeting both your immediate needs and long-term objectives.",
+  "local": true,
+  "noFinancialAuthority": true
+}

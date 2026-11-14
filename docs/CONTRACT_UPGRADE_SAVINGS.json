@@ -1,0 +1,12 @@
+{
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "network": "testnet",
+  "txHash": "BQ4FVyAXxj9ePDGCRh9NsNFz4TfB79VhbXNpLprw15Kc",
+  "wasmSha256": "f6673f3d273fd144db0a065e04ca2330e437c74113964c02e39df42d4db15d5f",
+  "checkedAt": "2026-11-06T08:12:18.170Z",
+  "stateLayoutChanged": false,
+  "release": "savings-v2",
+  "addedMethods": [
+    "set_goal_policy_v2"
+  ]
+}

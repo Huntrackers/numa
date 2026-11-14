@@ -1,0 +1,17 @@
+{
+  "network": "testnet",
+  "contractId": "noma-vault-mw4ab6ev.testnet",
+  "checkedAt": "2026-11-06T02:07:29.756Z",
+  "checks": [
+    "Real NEP-413 full-access-key verification",
+    "Finalized company context",
+    "Stable calendar preview",
+    "Strict prepared operation",
+    "Final transaction reconciliation",
+    "Automatic executor settlement",
+    "Second worker scan does not repay"
+  ],
+  "authorizationHash": "Gw6TpPJ1x4AtzsYqjXJcHxdCp2SXFHfrCcNJ1bRzRrwJ",
+  "executionHash": "2ktJvUnk1u1xsTtdZab8eBRwRCwTZ5GjnR79czA4f2jE",
+  "obligationId": "f37246f8ca5fce200b3f0f4c79e3284f00126168c4a15072c40ea39a748cd4c2"
+}

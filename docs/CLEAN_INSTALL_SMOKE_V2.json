@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-11-06T14:19:42.678Z",
+  "status": "PASSED",
+  "version": "2.0.0",
+  "install": {
+    "command": "npm ci",
+    "success": true,
+    "evidence": "Fresh exported source installation observed in preceding execution; locked Node 24 dependencies"
+  },
+  "build": {
+    "command": "npm run build",
+    "success": true
+  },
+  "boot": {
+    "command": "npm run judge",
+    "noEnvFile": true,
+    "version": "2.0.0",
+    "fixtureLogin": true,
+    "initialObligations": 0,
+    "independentDatabase": true
+  },
+  "npmAudit": {
+    "low": 8,
+    "moderate": 0,
+    "high": 0,
+    "critical": 0
+  },
+  "scope": "Clean install and build plus separately verified HTTP startup; no human signature or new on-chain transaction."
+}

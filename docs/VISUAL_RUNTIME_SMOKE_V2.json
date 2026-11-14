@@ -1,0 +1,18 @@
+{
+  "checkedAt": "2026-11-06T14:13:17.521Z",
+  "status": "PASSED",
+  "actualServer": "http://127.0.0.1:4310",
+  "version": "2.0.0",
+  "samplePersonasDisabled": true,
+  "pinnedMeteorInitialized": true,
+  "cspUnsafeEval": false,
+  "desktop": true,
+  "mobile": true,
+  "horizontalOverflow": false,
+  "screenshots": [
+    "qa/numa-v2-login-desktop.png",
+    "qa/numa-v2-login-mobile.png",
+    "qa/numa-v2-meteor-desktop.png"
+  ],
+  "humanSignaturePerformed": false
+}

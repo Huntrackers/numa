@@ -1,0 +1,6 @@
+
+> numa@3.0.0 format:check
+> prettier --check "apps/**/*.{ts,tsx,css,html}" "packages/**/*.ts" "tests/**/*.ts" "scripts/*.{ts,mjs}" *.json *.ts
+
+Checking formatting...
+All matched files use Prettier code style!

@@ -1,0 +1,19 @@
+{
+  "mode": "ISOLATED_LOCAL_HTTP",
+  "iterations": 3,
+  "startupMs": [
+    1073,
+    1281,
+    1272
+  ],
+  "totalMs": [
+    4063,
+    4233,
+    4229
+  ],
+  "environment": {
+    "node": "v24.16.0",
+    "platform": "win32"
+  },
+  "note": "Warm dependency installation, fresh temporary DB and child process per iteration; not a load test."
+}

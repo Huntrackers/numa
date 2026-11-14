@@ -1,0 +1,43 @@
+
+> numa@3.0.0 doctor
+> tsx scripts/doctor.ts --browser
+
+{
+  "product": "numa",
+  "version": "3.0.0",
+  "status": "PASS",
+  "platform": "win32",
+  "architecture": "x64",
+  "checks": [
+    {
+      "name": "Node.js 24",
+      "status": "PASS",
+      "detail": "v24.16.0; use Node.js 24 LTS (see .nvmrc).",
+      "required": true
+    },
+    {
+      "name": "SQLite",
+      "status": "PASS",
+      "detail": "Built-in Node SQLite opens and queries an in-memory database.",
+      "required": true
+    },
+    {
+      "name": "Locked package version",
+      "status": "PASS",
+      "detail": "3.0.0; install using npm ci.",
+      "required": true
+    },
+    {
+      "name": "Browser",
+      "status": "PASS",
+      "detail": "A usable Chromium executable is installed.",
+      "required": true
+    },
+    {
+      "name": "Built web assets",
+      "status": "NOT_AVAILABLE",
+      "detail": "Run npm run build before npm run judge.",
+      "required": false
+    }
+  ]
+}

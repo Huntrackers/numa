@@ -1,0 +1,4 @@
+-- Runtime migration is executed transactionally by Store.migrate().
+-- Monetary amounts are decimal strings and are never summed through SQL numeric casts.
+-- Immutable journal entries and lines, normalized sessions, challenges, requests and outbox.
+-- Schema version 1; see packages/db/src/index.ts for executable DDL.

@@ -1,0 +1,469 @@
+.workspace-entry {
+  min-height: 100vh;
+  background: var(--paper);
+}
+.workspace-entry .btn {
+  max-width: 100%;
+  min-width: 0;
+  white-space: normal;
+  text-align: center;
+}
+.workspace-entry .btn svg {
+  flex-shrink: 0;
+}
+.workspace-entry-header {
+  max-width: 1280px;
+  min-height: 92px;
+  margin: auto;
+  padding: 20px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  gap: 20px;
+}
+.workspace-entry-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 11px;
+  font-family: 'Manrope Variable', sans-serif;
+  font-size: 27px;
+  font-weight: 760;
+  letter-spacing: -1px;
+}
+.workspace-entry-brand > span {
+  height: 32px;
+  width: 32px;
+  background: var(--harbor);
+  color: var(--glacier);
+  border-radius: 9px;
+  text-align: center;
+  line-height: 31px;
+  font-size: 26px;
+}
+.workspace-entry-identity {
+  display: flex;
+  align-items: center;
+  gap: 13px;
+  min-width: 0;
+}
+.workspace-entry-account {
+  min-width: 0;
+  max-width: 290px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+  color: var(--muted);
+}
+.workspace-entry-main {
+  max-width: 1280px;
+  padding: 48px 40px 24px;
+  margin: auto;
+}
+.workspace-entry-intro {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+.workspace-entry-intro h1 {
+  font-size: clamp(28px, 3vw, 43px);
+  letter-spacing: -1.6px;
+}
+.workspace-entry-intro p {
+  max-width: 610px;
+  margin-bottom: 0;
+}
+.workspace-entry-layout {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(270px, 0.85fr);
+  gap: 36px;
+  align-items: start;
+}
+.workspace-directory {
+  min-width: 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 24px;
+}
+.workspace-section-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+.workspace-section-heading h2 {
+  margin-bottom: 0;
+}
+.workspace-directory-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.workspace-directory-list > li {
+  padding: 23px 0;
+  border-bottom: 1px solid var(--line);
+}
+.workspace-directory-list > li:last-child {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+.workspace-directory-row {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.workspace-company-mark {
+  width: 46px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  background: var(--cloud);
+  font-family: 'Manrope Variable', sans-serif;
+  font-weight: 750;
+  font-size: 22px;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+.workspace-company-description {
+  flex: 1;
+  min-width: 0;
+}
+.workspace-company-description h3 {
+  margin-bottom: 4px;
+  overflow-wrap: anywhere;
+}
+.workspace-company-description p {
+  font-size: 12px;
+  margin-bottom: 8px;
+}
+.workspace-registration-recovery {
+  margin: 16px 0 0 61px;
+  border-left: 2px solid #c8e5ed;
+  padding: 0 0 0 15px;
+}
+.workspace-registration-recovery p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.workspace-registration-recovery .btn {
+  padding-bottom: 0;
+}
+.workspace-first-company {
+  padding: 37px 10px 16px;
+  max-width: 570px;
+}
+.workspace-first-company > svg {
+  color: var(--harbor);
+  margin-bottom: 18px;
+}
+.workspace-first-company h3 {
+  font-size: 23px;
+  line-height: 1.4;
+  letter-spacing: -0.8px;
+  margin-bottom: 11px;
+  max-width: 360px;
+}
+.workspace-create {
+  margin-top: 28px;
+  background: var(--paper);
+  border-radius: 8px;
+  border: 1px solid var(--line);
+  padding: 23px;
+}
+.workspace-create form {
+  max-width: 520px;
+}
+.workspace-create .field {
+  margin-bottom: 20px;
+}
+.workspace-create input {
+  width: 100%;
+  background: white;
+}
+.workspace-create-owner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  overflow-wrap: anywhere;
+  font-size: 12px;
+  color: var(--harbor);
+}
+.workspace-create-owner svg {
+  flex-shrink: 0;
+}
+.workspace-create-proof {
+  font-size: 12px;
+  margin: 15px 0 20px;
+}
+.workspace-personal {
+  background: var(--cloud);
+  border-radius: 12px;
+  padding: 29px;
+  min-width: 0;
+}
+.workspace-personal > svg {
+  color: var(--harbor);
+  margin-bottom: 21px;
+}
+.workspace-personal h2 {
+  font-size: 22px;
+  line-height: 1.4;
+  letter-spacing: -0.6px;
+  margin-bottom: 12px;
+}
+.workspace-personal > .btn {
+  width: 100%;
+  margin-top: 4px;
+  justify-content: space-between;
+}
+.workspace-invite-help {
+  font-size: 12px;
+  margin: 21px 0 0;
+}
+.workspace-access-note {
+  margin-top: 29px;
+  padding-top: 22px;
+  border-top: 1px solid #cad6df;
+  display: flex;
+  gap: 9px;
+  align-items: start;
+}
+.workspace-access-note svg {
+  flex-shrink: 0;
+  color: var(--harbor);
+  margin-top: 2px;
+}
+.workspace-access-note p {
+  font-size: 12px;
+  margin-bottom: 0;
+}
+.workspace-employments {
+  list-style: none;
+  padding: 0;
+  margin: 21px 0 0;
+}
+.workspace-employments li {
+  margin-top: 14px;
+  overflow-wrap: anywhere;
+}
+.workspace-employments b {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+}
+.workspace-employments small {
+  color: var(--muted);
+  font-size: 12px;
+}
+.workspace-entry-footer {
+  display: flex;
+  gap: 23px;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 35px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  font-size: 12px;
+  color: var(--muted);
+}
+.workspace-entry-footer span {
+  margin-left: auto;
+}
+.workspace-entry-footer a:hover {
+  text-decoration: underline;
+}
+.workspace-invitation-main {
+  min-width: 0;
+  width: min(660px, calc(100% - 32px));
+  max-width: 660px;
+  padding: 50px 32px 44px;
+  margin: 38px auto 0;
+  background: white;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.workspace-invitation-main > h1 {
+  font-size: 30px;
+  letter-spacing: -1px;
+}
+.workspace-invitation-main > p {
+  max-width: 560px;
+}
+.workspace-invitation-symbol {
+  width: 62px;
+  height: 62px;
+  background: var(--cloud);
+  display: grid;
+  place-items: center;
+  color: var(--harbor);
+  border-radius: 12px;
+  margin-bottom: 24px;
+}
+.workspace-invitation-details {
+  margin: 27px 0 28px;
+  border-top: 1px solid var(--line);
+}
+.workspace-invitation-details > div {
+  padding: 13px 0;
+  border-bottom: 1px solid var(--line);
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 16px;
+  font-size: 13px;
+  line-height: 1.6;
+}
+.workspace-invitation-details dt {
+  color: var(--muted);
+}
+.workspace-invitation-details dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  font-weight: 550;
+  font-variant-numeric: tabular-nums;
+}
+.workspace-invitation-footnote {
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+  margin-top: 31px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+@media (max-width: 850px) {
+  .workspace-entry-header {
+    padding: 20px 24px;
+  }
+  .workspace-entry-main {
+    padding: 33px 24px 22px;
+  }
+  .workspace-entry-layout {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+  }
+  .workspace-personal {
+    display: block;
+  }
+  .workspace-entry-intro {
+    align-items: start;
+  }
+  .workspace-entry-intro > .btn {
+    flex-shrink: 0;
+  }
+  .workspace-personal > .btn {
+    width: auto;
+    gap: 20px;
+  }
+  .workspace-entry-account {
+    max-width: 200px;
+  }
+}
+@media (max-width: 540px) {
+  .workspace-entry-header {
+    padding: 16px;
+    min-height: 78px;
+  }
+  .workspace-entry-identity {
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+  }
+  .workspace-entry-account {
+    max-width: 160px;
+    font-size: 11px;
+  }
+  .workspace-entry-identity .badge {
+    display: none;
+  }
+  .workspace-entry-main {
+    padding: 27px 16px 20px;
+  }
+  .workspace-entry-intro {
+    display: block;
+    margin-bottom: 23px;
+  }
+  .workspace-entry-intro > .btn {
+    margin-top: 17px;
+  }
+  .workspace-entry-intro h1 {
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+  .workspace-directory {
+    padding: 18px;
+  }
+  .workspace-section-heading {
+    align-items: start;
+  }
+  .workspace-section-heading .btn {
+    padding: 3px 0;
+  }
+  .workspace-directory-row {
+    gap: 11px;
+    align-items: start;
+    flex-wrap: wrap;
+  }
+  .workspace-company-mark {
+    width: 37px;
+    height: 42px;
+    font-size: 19px;
+  }
+  .workspace-company-description {
+    min-width: 150px;
+  }
+  .workspace-directory-row > .btn {
+    margin-left: 48px;
+    min-height: 36px;
+  }
+  .workspace-registration-recovery {
+    margin-left: 48px;
+  }
+  .workspace-company-description .badge {
+    white-space: normal;
+  }
+  .workspace-first-company {
+    padding: 27px 0 12px;
+  }
+  .workspace-first-company h3 {
+    font-size: 21px;
+  }
+  .workspace-create {
+    padding: 16px;
+    margin-top: 23px;
+  }
+  .workspace-personal {
+    padding: 23px;
+  }
+  .workspace-entry-footer {
+    gap: 13px;
+    margin-top: 25px;
+  }
+  .workspace-entry-footer span {
+    width: 100%;
+    margin-left: 0;
+  }
+  .workspace-invitation-main {
+    margin: 22px 16px;
+    padding: 28px 21px;
+  }
+  .workspace-invitation-main > h1 {
+    font-size: 27px;
+  }
+  .workspace-invitation-details > div {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+    padding: 11px 0;
+  }
+  .workspace-invitation-main .button-group {
+    align-items: stretch;
+    flex-direction: column;
+  }
+  .workspace-invitation-main .button-group > .btn {
+    justify-content: center;
+  }
+}

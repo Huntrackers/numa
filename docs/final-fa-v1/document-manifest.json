@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "status": "awaiting_user_approval",
+  "date": "2026-11-04",
+  "sections": 27,
+  "acceptanceScenarios": 42,
+  "source": "FINAL_SPEC.fa.md",
+  "html": "FINAL_SPEC.fa.html",
+  "implementationStarted": false,
+  "sourceSha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618",
+  "verification": {
+    "persianLint": "passed",
+    "jsonExamples": "passed",
+    "localLinks": "passed",
+    "numericalExamples": "passed",
+    "responsiveHtml": "passed",
+    "acceptanceScenarios": 42
+  }
+}

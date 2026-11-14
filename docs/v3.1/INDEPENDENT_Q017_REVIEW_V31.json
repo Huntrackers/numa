@@ -1,0 +1,601 @@
+{
+  "product": "numa",
+  "version": "3.1.0",
+  "reviewedOn": "2026-11-07",
+  "reviewedAtUtc": "2026-11-06T23:38:32.411Z",
+  "classification": "INDEPENDENT_Q017_PRELIMINARY_REVIEW_NOT_OFFICIAL_JUDGING",
+  "verdict": "REPRODUCIBLE_WITH_DISCLOSED_LIMITS",
+  "officialScore": null,
+  "official_rules_checked": {
+    "retrievedOn": "2026-11-07",
+    "sources": [
+      "https://nearhackathon.com/",
+      "https://nearhackathon.com/HACKATHON.md"
+    ],
+    "savedResearch": "docs/v3/official-rules-v31.json",
+    "markdownSnapshot": "docs/v3/sources/HACKATHON.v31.md",
+    "markdownSha256": "903794f4b656b456eaee087941517d024a33633641d167b90c3f060d381d9aed",
+    "allQ000ThroughQ017Unchanged": true,
+    "sourceChanges": [
+      "NEAR Business ecosystem table row added",
+      "NEAR Business resource paragraph added"
+    ],
+    "publishedNumericWeights": null,
+    "publishedPassScore": null,
+    "published99Threshold": false,
+    "screeningRole": "Q-017: reproducibility, feature verification, structured report and preliminary score; humans decide; low AI score alone cannot reject."
+  },
+  "environment": {
+    "os": "Microsoft Windows NT 10.0.26300.0 x64",
+    "node": "v24.16.0",
+    "npm": "11.13.0",
+    "browser": "Chromium selected by packaged scripts/browser.ts",
+    "freshExtraction": true,
+    "nodeModulesAbsentBeforeInstall": true,
+    "privateEnvironmentAbsent": true,
+    "privateEnvironmentAbsentBasis": "The frozen export contains no private environment/key paths; no private key contents were opened or scanned."
+  },
+  "reproducibility_result": {
+    "status": "PASS",
+    "manifestEntries": 270,
+    "manifestMismatches": [],
+    "manifestSha256": "ad845fa838597252127719ba7391d598645cac0cd9eb604efee90f3744e96c96",
+    "privatePathMatches": [],
+    "fullSourceDigest": "7c026b4745f42e307c461461ffb6f28d861bf4bc621f7f84016ea42ed0569df2",
+    "sourceUnchangedDuringVerification": true,
+    "codeDigest": "8349451db52fb92c91e179720b23d4e9538d0af4106ae397c0f9773462a0ae18",
+    "codeDigestMethod": "SHA256(JSON.stringify(sorted sourceDigest entries excluding README.md)); entry keys are path and sha256",
+    "codeEntries": 150,
+    "projectCodeIdenticalAtComparison": true,
+    "baselineFinalSpecSha256": "75074264a2a28ec513a9a57e7dd793af1daff9c18c0498e358cda3137bfa6618",
+    "finalDocumentationOnlyExportMustPreserveCodeDigest": true,
+    "projectCodeRecheckedAtFinalReport": "2026-11-06T23:38:32.411Z",
+    "projectCodeMismatchesAtFinalReport": []
+  },
+  "commands_executed": [
+    {
+      "command": "npm ci",
+      "exitCode": 0,
+      "result": "234 packages installed; eight low advisory entries",
+      "evidence": "npm-ci.log"
+    },
+    {
+      "command": "npm run verify",
+      "exitCode": 0,
+      "durationMs": 56039,
+      "unitApiPassed": 283,
+      "httpChecksPassed": 10,
+      "browser": "NOT_REQUESTED",
+      "contract": "NOT_REQUESTED",
+      "evidence": "verification-core.json"
+    },
+    {
+      "command": "npm run verify -- --browser",
+      "exitCode": 0,
+      "durationMs": 186030,
+      "unitApiPassed": 283,
+      "unitApiFailed": 0,
+      "unitApiSkipped": 0,
+      "httpChecksPassed": 10,
+      "browserPassed": 74,
+      "browserFailed": 0,
+      "browserSkipped": 0,
+      "browserFlaky": 0,
+      "contract": "NOT_REQUESTED",
+      "evidence": "verification-browser.json"
+    },
+    {
+      "command": "npm audit --json",
+      "result": {
+        "info": 0,
+        "low": 8,
+        "moderate": 0,
+        "high": 0,
+        "critical": 0,
+        "total": 8
+      },
+      "evidence": "npm-audit.json"
+    }
+  ],
+  "supplied_native_contract_evidence": {
+    "independentlyRerunInFreshExtraction": false,
+    "rootCommand": "npm run verify -- --browser --contract",
+    "passed": 29,
+    "failed": 0,
+    "ignored": 1,
+    "ignoredTest": "v3_rehearse_private_snapshot_without_balance_changes",
+    "ignoredReason": "Requires explicit private V2 snapshot; no private snapshot was opened or counted as passed.",
+    "nativeNotFullChainSandbox": true,
+    "evidence": "root-native-contract-tests.txt"
+  },
+  "claim_results": [
+    {
+      "id": "N01",
+      "claim": "Roles, salary calendars and bulk compensation previews",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "TESTNET_AND_FIXTURE",
+      "evidence": [
+        "tests/live.test.ts",
+        "tests/domain.test.ts",
+        "tests/e2e/workflows.spec.ts",
+        "root-live-complete.json"
+      ],
+      "boundary": "Fresh API/domain/browser reproduction plus source-reviewed root full smoke with programmatic genuine NEP-413 role decision and testnet compensation operations; reviewer did not sign new transactions."
+    },
+    {
+      "id": "N02",
+      "claim": "A funded mandate reserves salary and credits each obligation once",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LIVE_TESTNET_CORROBORATED",
+      "evidence": [
+        "public-chain-evidence.json",
+        "executor-receipt-key.json",
+        "root-live-recovery.json",
+        "tests/worker-selection.test.ts",
+        "tests/service.test.ts",
+        "root-live-complete.json",
+        "public-complete-smoke-evidence.json"
+      ],
+      "boundary": "Independent RPC verifies both the retained recovered obligation and later fresh full-smoke payroll receipt, credited state and restricted receipt key. No duplicate credit is additionally asserted by root smoke and fresh local regressions."
+    },
+    {
+      "id": "N03",
+      "claim": "Restricted executor and shared network/receiver/method/code guards",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LIVE_TESTNET_AND_TRANSPORT_FIXTURE",
+      "evidence": [
+        "executor-receipt-key.json",
+        "public-chain-evidence.json",
+        "tests/safety.test.ts",
+        "tests/worker-safety.test.ts",
+        "tests/review.test.ts"
+      ],
+      "boundary": "Receipt key permission and deployed code hash were read independently; adversarial dispatch transport is mocked in tests."
+    },
+    {
+      "id": "N04",
+      "claim": "Employee claims and withdrawals preserve authority during automation pause",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LIVE_TESTNET_CORROBORATED_AND_NATIVE_EVIDENCE",
+      "evidence": [
+        "root-native-contract-tests.txt",
+        "tests/live.test.ts",
+        "tests/e2e/wallet.spec.ts",
+        "root-live-complete.json",
+        "public-complete-smoke-evidence.json"
+      ],
+      "boundary": "Fresh public RPC verifies the later smoke employee withdrawal is FINAL with no failed receipt; root supplied fresh 29-pass native output; pause/authority edge cases use independently rerun API/UI fixtures."
+    },
+    {
+      "id": "N05",
+      "claim": "Atomic goal allocation, cash floor and integer rounding",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "NATIVE_EVIDENCE_AND_API",
+      "evidence": [
+        "root-native-contract-tests.txt",
+        "tests/savings.test.ts",
+        "tests/fixtures/goal-vectors.json",
+        "public-chain-evidence.json"
+      ],
+      "boundary": "Fresh TypeScript vectors and public account/obligation accounting; native Rust result supplied by root."
+    },
+    {
+      "id": "N06",
+      "claim": "Finalized reconciliation, balanced journal and backup recovery",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LOCAL_VERIFIED_PROJECTION",
+      "evidence": [
+        "tests/release-recovery.test.ts",
+        "tests/backups.test.ts",
+        "verify/2026-11-06T23-26-33-118Z/review-smoke.json",
+        "public-chain-evidence.json"
+      ],
+      "boundary": "Isolated five-salary fixture journey balances; public financial summary is liability/backing valid."
+    },
+    {
+      "id": "N07",
+      "claim": "Correct wrong proof without resending unknown outcomes",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "API_AND_UI_FIXTURE",
+      "evidence": [
+        "tests/v3-recovery.test.ts",
+        "tests/rpc.test.ts",
+        "tests/recovery-http.test.ts",
+        "tests/e2e/recovery-ui.spec.ts"
+      ],
+      "boundary": "Fresh wrong-hash/unknown-result/refund/rollback/concurrent-candidate and failed-refresh checks."
+    },
+    {
+      "id": "N08",
+      "claim": "Nonce identity, tenant isolation and operator revocation",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "CRYPTOGRAPHIC_UNIT_AND_HTTP",
+      "evidence": [
+        "tests/auth.test.ts",
+        "tests/production.test.ts",
+        "tests/approvals.test.ts",
+        "tests/live.test.ts"
+      ],
+      "boundary": "Cryptographic signatures are real ephemeral fixture keys; account-key RPC is mocked. Live restricted receipt key independently corroborated."
+    },
+    {
+      "id": "N09",
+      "claim": "Provider-signed dry quotes with exact amounts and expiry",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LIVE_READ_ONLY",
+      "evidence": [
+        "intents-live-read-only.json",
+        "intents-provider-signed-quote.json",
+        "tests/intents.test.ts",
+        "tests/e2e/trust.spec.ts"
+      ],
+      "boundary": "Fresh public 1Click request verified by packaged SDK, dry=true, depositAddress=null, fundsMoved=false, executionEnabled=false."
+    },
+    {
+      "id": "N10",
+      "claim": "Investing, DCA, Earn, loans and Flexible Payday remain simulations",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "SIMULATION",
+      "evidence": [
+        "tests/v1.test.ts",
+        "tests/e2e/workflows.spec.ts",
+        "tests/approvals.test.ts"
+      ],
+      "boundary": "Fresh planning journeys and reset/epoch race regression; no real market trade or lending inferred."
+    },
+    {
+      "id": "N11",
+      "claim": "Assistant proposals need server validation and human confirmation",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LOCAL_OPTIONAL_MODEL",
+      "evidence": [
+        "tests/model.test.ts",
+        "tests/e2e/workflows.spec.ts"
+      ],
+      "boundary": "Typed proposal path tested; optional live Ollama generation not run."
+    },
+    {
+      "id": "N12",
+      "claim": "Desktop/mobile/keyboard and automated accessibility journeys",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "BROWSER",
+      "evidence": [
+        "tests/e2e/accessibility.spec.ts",
+        "tests/e2e/v3-ux.spec.ts",
+        "tests/e2e/landing.spec.ts",
+        "tests/e2e/onboarding.spec.ts"
+      ],
+      "boundary": "74 browser tests pass; selected axe audits and keyboard checks do not establish manual assistive-technology conformance."
+    },
+    {
+      "id": "N13",
+      "claim": "Judge mode starts an isolated database without automatic keys",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "LOCAL_HTTP_FIXTURE",
+      "evidence": [
+        "scripts/review-smoke.ts",
+        "scripts/judge.ts",
+        "verify/2026-11-06T23-26-33-118Z/review-smoke.json"
+      ],
+      "boundary": "Fresh startup measured at 1071 ms; no real signatures or chain transactions in reviewer verifier."
+    },
+    {
+      "id": "V31-LANDING",
+      "claim": "Public landing is usable before identity bootstrap",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "PUBLIC_UI",
+      "evidence": [
+        "tests/e2e/landing.spec.ts"
+      ],
+      "boundary": "Five checks cover delayed bootstrap, separate company/employee return intent, public evidence, keyboard skip and 390px accessibility/overflow."
+    },
+    {
+      "id": "V31-ONBOARDING",
+      "claim": "Authorized directory, resumable company draft and invited-account acceptance",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "AUTHENTICATED_UI_AND_HTTP",
+      "evidence": [
+        "tests/onboarding.test.ts",
+        "tests/onboarding-routes.test.ts",
+        "tests/live.test.ts",
+        "tests/e2e/onboarding.spec.ts"
+      ],
+      "boundary": "Checks cover wrong-account privacy, accepted/expired/revoked/pending states, actual tenant routes, saved draft, duplicate prevention and late identity responses. Browser API/transaction boundaries are fixtures."
+    },
+    {
+      "id": "V31-APPROVALS",
+      "claim": "Bound NEP-413 approvals for local metadata/admin/simulation decisions",
+      "outcome": "VERIFIED_WITHIN_STATED_BOUNDARY",
+      "mode": "CRYPTOGRAPHIC_HTTP_AND_WALLET_UI",
+      "evidence": [
+        "tests/approvals.test.ts",
+        "tests/e2e/decision-approval.spec.ts",
+        "tests/e2e/decision-click-cancel.spec.ts",
+        "apps/api/src/approvals.ts",
+        "apps/web/src/wallet.ts",
+        "root-live-complete.json"
+      ],
+      "boundary": "Fresh checks bind body/basis/account/session/domain/expiry/nonce/key/idempotency; revoke during key RPC, reset epoch race and ownership checks reject. Real pointer clicks exercise wallet layering; browser signatures are fixtures. Root full-smoke evidence also records a genuine programmatic NEP-413 role.save decision; reviewer did not perform an interactive human Meteor journey."
+    }
+  ],
+  "public_chain_observation": {
+    "status": "PASS",
+    "receipt": "AMx2r3uHvzBphNXJVy4zoy67aqaGRc3BarBpk6ABHq4W",
+    "receiptExplorer": "https://testnet.nearblocks.io/txns/AMx2r3uHvzBphNXJVy4zoy67aqaGRc3BarBpk6ABHq4W",
+    "signer": "noma-executor-mw4ab6ev.testnet",
+    "receiver": "noma-vault-mw4ab6ev.testnet",
+    "method": "execute_due",
+    "finality": "FINAL",
+    "hasFailedReceipt": false,
+    "obligationId": "fe7a327f2c3b8f7901b0d4390a00a69ec9b3578569306cf679bb95bbe99f1384",
+    "credited": true,
+    "codeHash": "EM4NqrNoxHhDHQkPvVzxvwgrTkjt8mNjHduQqNUHoyvW",
+    "codeHashMatches": true,
+    "receiptSignedByRestrictedExecuteDueKey": true,
+    "storageVersion": 3,
+    "liabilityValid": true,
+    "backingValid": true,
+    "allReservationsValid": true,
+    "reviewerTransactionsSent": 0,
+    "evidence": [
+      "public-chain-evidence.json",
+      "executor-receipt-key.json"
+    ]
+  },
+  "real_product_smoke": {
+    "originalFreshFullRunOutcome": "STOPPED_BEFORE_PAYROLL_BROADCAST",
+    "originalDiagnosis": "Root retained-state diagnosis infers a timed-out public executor access-key read: healthy reconciliation, no executor observation and no chain jobs.",
+    "originalRecoveryOutcome": "EXACT_RETAINED_OBLIGATION_CONFIRMED",
+    "newCompanyFundingOrMandateDuringOriginalRecovery": false,
+    "originalFailureAndRecoveryEvidencePreserved": true,
+    "laterFreshIsolatedFullRun": {
+      "status": "PASS",
+      "completedChecks": 14,
+      "totalChecks": 14,
+      "performedBy": "ROOT_AGENT_WITH_AUTHORIZED_TESTNET_FIXTURE",
+      "independentlyRerunByReviewer": false,
+      "sourceAndArtifactCrossCheckedByReviewer": true,
+      "companyId": "c_b4c4100e035986f16cc681cc922bc3d0",
+      "obligationId": "851b4caddd4e11de16928670bd294f52198aea9a75ba2138e9bac899447b82da",
+      "reconciliation": "HEALTHY",
+      "executorTransaction": "8PqRuD2Y5rBW4AWuz6oUF6Y8jqPbiBNzoYvdir6JLEHh",
+      "withdrawalTransaction": "2KUTbwWVrijCSiaNsiudrYZbW8hz6b296i1HQ9NoiCr1",
+      "reportSha256": "aad9cb298a504b429b479e10e09b45153acad4bd49541179ff7a637a81c23f41",
+      "checks": [
+        "Two genuine NEP-413 identities",
+        "Private company creation and NEAR registration",
+        "Sensitive role metadata requires and records a genuine NEAR NEP-413 decision signature",
+        "Invitation and employee acceptance from ordinary product metadata",
+        "Treasury funding through a verified prepared operation",
+        "Duplicate funding operation rejected without a second credit",
+        "Salary-linked atomic goal policy",
+        "Calendar-based full-prefunding mandate",
+        "Role-aware bulk salary amendment replaces a future obligation",
+        "One-time bonus stays separate from recurring salary",
+        "Restricted executor automatically credits salary after reconciliation",
+        "Second scan cannot credit the salary twice",
+        "Employee withdrawal with finalized callback verification",
+        "Ordinary company workspace reads finalized payroll"
+      ],
+      "boundary": "Real programmatic NEP-413 signatures and real testnet transactions through in-process API injection. A disposable local employee anchor is adjusted to schedule an imminent payday. This does not establish an interactive Meteor browser journey; fourteen labels describe completed smoke checks, not exhaustive proof of each feature."
+    },
+    "independentPublicCorroboration": {
+      "status": "PASS",
+      "payrollFinal": "FINAL",
+      "payrollHasFailedReceipt": false,
+      "exactReceiptKeyRestrictedToExecuteDue": true,
+      "credited": true,
+      "withdrawalFinal": "FINAL",
+      "withdrawalHasFailedReceipt": false,
+      "codeHashMatches": true,
+      "liabilityValid": true,
+      "backingValid": true,
+      "allReservationsValid": true,
+      "reviewerTransactionsSent": 0
+    },
+    "evidence": [
+      "root-live-failure-diagnosis.json",
+      "root-live-recovery.json",
+      "public-chain-evidence.json",
+      "root-live-complete.json",
+      "root-live-complete.txt",
+      "public-complete-smoke-evidence.json"
+    ]
+  },
+  "findings": [
+    {
+      "id": "F31-01",
+      "priority": "P2",
+      "state": "CLOSED",
+      "title": "Older pending company invitations could restore revoked access",
+      "independentlyReproducedBeforeFix": true,
+      "location": "apps/api/src/live.ts:630",
+      "repair": "New invitations supersede old pending links; member.revoke atomically revokes pending links for the account.",
+      "verification": "Fresh signed HTTP regression refuses an approval obtained before revocation and older superseded links."
+    },
+    {
+      "id": "F31-02",
+      "priority": "P2",
+      "state": "CLOSED",
+      "title": "Legacy workspace route exposed current company metadata to revoked membership",
+      "independentlyReproducedBeforeFix": true,
+      "location": "apps/api/src/server.ts:397",
+      "repair": "Filter ACTIVE membership and book mode; return a minimal company projection.",
+      "verification": "Fresh regression verifies private field omission and zero workspace rows after revocation."
+    },
+    {
+      "id": "F31-03",
+      "priority": "P2",
+      "state": "CLOSED",
+      "title": "Wallet sandbox popup was covered by native modal dialogs",
+      "identifiedBy": "Root pointer-click browser reproduction",
+      "location": "apps/web/src/wallet.ts:55",
+      "repair": "Suspend connected app dialogs, preserve root inert state, serialize wallet requests and restore dialogs/focus.",
+      "verification": "Independent fresh real-pointer browser signing/rejection/cancellation tests pass."
+    },
+    {
+      "id": "F31-04",
+      "priority": "P2",
+      "state": "CLOSED",
+      "title": "Signed simulation input could target a newer planning book after reset",
+      "location": "apps/api/src/server.ts:367",
+      "repair": "Bind planning book/identity/epoch and recheck epoch after access-key verification; replay applied request by unchanged request hash.",
+      "verification": "Fresh cryptographic HTTP regressions reject old-book and in-flight-reset proof while preserving idempotent reset success."
+    },
+    {
+      "id": "F31-05",
+      "priority": "P2",
+      "state": "CLOSED",
+      "title": "Committed success could be presented as failure after refresh or an identity change",
+      "location": "apps/web/src/LiveDecision.tsx:28",
+      "repair": "Keep committed state separate from refresh warning and guard late results with mount/identity generation.",
+      "verification": "Fresh UI tests preserve saved company/confirmed receipt after refresh failure and prevent old-account decision display."
+    },
+    {
+      "id": "R31-01",
+      "priority": "P3",
+      "state": "OPEN_DEPENDENCY_OBSERVATION",
+      "title": "Eight low dependency advisory entries remain",
+      "evidence": "npm-audit.json",
+      "impact": "Transitive advisory lineage, not eight established application exploits. Exploitability of the Ed25519 product paths was not demonstrated."
+    }
+  ],
+  "confirmedOpenProductBlockers": [],
+  "track_fit": {
+    "strongest": "Real-World Money",
+    "supported": "AI Security & Defense",
+    "partial": "Autonomous Business",
+    "noFullyAutonomousCompanyClaim": true
+  },
+  "publication_gates": {
+    "status": "OWNER_ACTIONS_OUTSTANDING",
+    "requirements": [
+      "Public repository through judging and LICENSE",
+      "Public X demo post with required mention, hashtag and video for local-only demo",
+      "Actual human team/contact/payout details, consent and one approved submission",
+      "Pre-window baseline/judged-diff disclosure when applicable",
+      "Reciprocal README disclosure if another independent project is submitted"
+    ],
+    "publicationOrSubmissionPerformedByReviewer": false
+  },
+  "preliminary_score": {
+    "classification": "OPTIONAL_NON_OFFICIAL_OBSERVED_DELIVERY_AND_ASSURANCE_SCORE",
+    "score": 97,
+    "maximum": 100,
+    "officialScore": null,
+    "targetScoreUsedAsEvidence": false,
+    "method": "Reviewer-selected five-category prototype-delivery rubric; points represent bounded observed assurance, not probability, official contest weights, or a forecast of human judging.",
+    "criteria": [
+      {
+        "name": "Reproducibility and artifact integrity",
+        "maximum": 25,
+        "awarded": 25,
+        "deductions": []
+      },
+      {
+        "name": "Advertised behavior and observable evidence",
+        "maximum": 30,
+        "awarded": 29,
+        "deductions": [
+          {
+            "points": 1,
+            "basis": "This reviewer did not complete a new interactive human Meteor company-to-employee journey. Automated browser signatures and transactions use declared fixtures."
+          }
+        ]
+      },
+      {
+        "name": "Failure behavior and execution assurance",
+        "maximum": 25,
+        "awarded": 24,
+        "deductions": [
+          {
+            "points": 1,
+            "basis": "Fresh npm audit reports eight low advisory entries through elliptic/secp256k1/NEAR-JS. No product Ed25519 exploit is established; compatible upstream remediation remains open."
+          }
+        ]
+      },
+      {
+        "name": "Interface and accessibility evidence",
+        "maximum": 15,
+        "awarded": 14,
+        "deductions": [
+          {
+            "points": 1,
+            "basis": "Automated WCAG and keyboard checks passed; manual screen-reader coverage was not performed."
+          }
+        ]
+      },
+      {
+        "name": "Claim clarity and track fit",
+        "maximum": 5,
+        "awarded": 5,
+        "deductions": []
+      }
+    ],
+    "notDeducted": [
+      "testnet-only scope",
+      "local-only deployment",
+      "lack of active users/revenue/validated demand",
+      "no public SLA",
+      "no external audit",
+      "no mandatory ecosystem integrations",
+      "owner publication gates not completed"
+    ],
+    "notAContestScore": true,
+    "passingExecutedChecksIsNotAProjectScore": true,
+    "revisionForLaterEvidence": "The one-point incomplete-full-smoke deduction was removed after a later fresh isolated 14/14 root run, source/artifact cross-check and independent public receipt corroboration; original failure/recovery remain disclosed."
+  },
+  "limitations": [
+    {
+      "check": "New independent human Meteor end-to-end signing journey",
+      "status": "NOT_RUN"
+    },
+    {
+      "check": "Native Rust suite in this fresh extraction",
+      "status": "NOT_RUN_ROOT_RESULT_SUPPLIED"
+    },
+    {
+      "check": "Optional private V2 snapshot rehearsal",
+      "status": "IGNORED_NOT_PASSED"
+    },
+    {
+      "check": "Manual screen-reader evaluation",
+      "status": "NOT_RUN"
+    },
+    {
+      "check": "Optional live Ollama generation",
+      "status": "NOT_RUN"
+    },
+    {
+      "check": "Production-scale assurance or external audit",
+      "status": "NOT_CLAIMED"
+    },
+    {
+      "check": "Later fresh complete real-product smoke",
+      "status": "ROOT_SUPPLIED_SOURCE_REVIEWED_AND_PUBLIC_RECEIPTS_INDEPENDENTLY_CORROBORATED_NOT_INDEPENDENTLY_RERUN"
+    }
+  ],
+  "evidence_root": "independent-review/ alongside source in review-kit; reproduction source/node_modules are outside this evidence folder",
+  "evidence_files": [
+    "manifest-and-code-verification.json",
+    "npm-ci.log",
+    "npm-audit.json",
+    "verify-core.log",
+    "verify-browser.log",
+    "verification-core.json",
+    "verification-browser.json",
+    "verify/",
+    "public-chain-evidence.json",
+    "executor-receipt-key.json",
+    "intents-live-read-only.json",
+    "intents-provider-signed-quote.json",
+    "root-live-failure-diagnosis.json",
+    "root-live-recovery.json",
+    "root-native-contract-tests.txt",
+    "root-live-complete.json",
+    "root-live-complete.txt",
+    "public-complete-smoke-check.mjs",
+    "public-complete-smoke-check.log",
+    "public-complete-smoke-evidence.json"
+  ]
+}
